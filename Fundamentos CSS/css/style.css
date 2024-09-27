@@ -1,0 +1,47 @@
+/*
+    COMENTARIO CSS
+    Regla css conta de 2 partes
+    1)el selector
+    2)bloque de declaraciones{
+    atributo:valor;
+    atributo-de-mas-dos-palabras:otro-valor;
+    }
+*/
+
+/*Son mala practica por que son bloqueantes a la hora de que el navegador lee esta instruccion*/
+@import url("otra-hoja.css"); /*con import puedo llamar otra oja de estilo  -> esto solo en CSS puro*/
+
+h1{
+    color: orangered;
+    background-color: black;
+}
+/*
+Selectores Basicos
+    1)Etiquetas - son elementos html
+    2)Identificadores - atributo id - #
+    3)Clases -atributo class - .
+*/
+p{
+    color: midnightblue;
+}
+/*Dar estilo con Id se considera un AntiPatron*/
+#parrafo-dos{
+    background-color: skyblue;
+}
+
+/*Dar estilos con clases nos permite reutilizar nuestro codigo CSS*/
+.bg-skyblue{
+    background-color: skyblue;
+}
+.bg-steelblue{
+    background-color: steelblue;
+}
+.text-20{
+    font-size: 20px;
+}
+.text-32{
+    font-size: 32px;
+}
+.text-white{
+    color: white;
+}
