@@ -15,6 +15,19 @@ h1{
     color: orangered;
     background-color: black;
 }
+
+/* 
+  Links de referencia y documentación
+  https://es.wikipedia.org/wiki/Hoja_de_estilos_en_cascada
+  https://www.w3.org/html/logo/
+  https://www.w3.org/standards/webdesign/htmlcss.html
+  https://www.w3.org/TR/css-2020/
+  https://developer.mozilla.org/es/docs/Web/CSS
+  https://cssreference.io/
+  https://caniuse.com/
+  https://codeguide.co/
+*/
+
 /*
 Selectores Basicos
     1)Etiquetas - son elementos html
