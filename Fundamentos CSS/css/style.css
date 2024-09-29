@@ -64,3 +64,12 @@ p{
 .hijos-descendientes b{
     background-color: thistle;
 }
+
+
+/*Los selectores de hermanos van a aplicar a los elementos que son hermanos y que esten por debajo del elemento de referencia*/
+.hermanos-general ~ li{
+    background-color: thistle;
+}
+.hermanos-adyacentes + li{
+    background-color: thistle;
+}
