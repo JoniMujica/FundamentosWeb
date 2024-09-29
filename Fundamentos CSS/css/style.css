@@ -116,3 +116,38 @@ p{
 .selector-universal *{
     font-size: 24px;
 }
+
+/*
+Pseudoclases - Dan estilos dependiendo del contexto, posicion o estado del elemento
+https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
+*/
+
+.form-pseudoclases *:required{
+    border-color: yellow;
+}
+
+.form-pseudoclases *:valid{
+    border-color: green;
+}
+.form-pseudoclases *:invalid{
+    border-color: red;
+}
+.form-pseudoclases *:focus{
+    background-color: skyblue;
+}
+.form-pseudoclases *:disabled{
+    background-color: pink;
+}
+.menu-pseudoclases a:hover{
+    color: orange;
+}
+
+.menu-pseudoclases a:visited{
+    color: olive;
+}
+.p-pseudoclases:hover{
+    font-size: 24px;
+}
+#temario-css:target{
+    background-color: lightgreen;
+}
