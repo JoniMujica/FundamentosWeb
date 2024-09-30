@@ -90,7 +90,8 @@ Propiedad Display
 */
 
 .caja-none,
-.caja-linea-bloque{
+.caja-linea-bloque,
+.caja-hidden{
     background-color: darkolivegreen;
     color: white;
     width: 600px;
@@ -102,5 +103,8 @@ Propiedad Display
 }
 .caja-none{
     display: none;
+}
+.caja-hidden{
+    visibility: hidden;
 }
 
