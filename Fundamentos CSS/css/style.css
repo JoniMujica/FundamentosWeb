@@ -222,3 +222,16 @@ https://developer.mozilla.org/es/docs/Web/CSS/Pseudoelementos
 .input-pseudoelementos::placeholder{
     color: green;
 }
+
+/*Agrupar selectores*/
+.form-agrupar-selectores input[type="text"],
+.form-agrupar-selectores input[type="email"],
+.form-agrupar-selectores textarea{
+    border-color: yellow;
+    background-color: black;
+    border-width: 2px;
+    border-style: dashed;
+    font-size: 20px;
+    display: block;
+    width: 300px;
+}
