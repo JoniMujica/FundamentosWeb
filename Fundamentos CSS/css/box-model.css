@@ -119,3 +119,34 @@ Propiedad Display
     /*overflow-y: scroll;*/
     overflow-x: scroll;
 }
+
+/*
+    Tamaño de caja
+*/
+.box-sizing-content,
+.box-sizing-border{
+    background-color: deepskyblue;
+    box-sizing: content-box;
+    width: 500px;
+    height: 250px;
+    padding: 10px;
+    border: thick solid black;
+    /*w 500 + 10 + 10 + 5 + 5 = 530*/
+    /*h 250 + 10 + 10 + 5 + 5 = 280*/
+}
+.box-sizing-border{
+    box-sizing: border-box;
+}
+.container-col-3{
+    background: burlywood;
+    width: 600px;
+    height: 300px;
+    margin-top: 20px;
+}
+.container-col-3 > *{
+    box-sizing: border-box;
+    width: 200px;
+    border: thin solid red;
+    padding: 10px;
+    float: left;
+}
