@@ -17,6 +17,9 @@ Dentro del modelo de caja hay que considerar que una caja tendrá 4 lados:
 h1{
     width: 400px;
     height: 200px;
-    border-width: 3px;
+    /*propiedades de tipo shorthand*/
+    border-color: green;
+    border-width: thick; /* thin - 1px* , medium . 3px , thick - 5px*/
     border-style: solid;
+    border: 2px dashed blue;
 }
