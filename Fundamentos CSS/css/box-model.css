@@ -13,7 +13,9 @@ Dentro del modelo de caja hay que considerar que una caja tendrá 4 lados:
   3. Abajo (bottom)
   4. Izquierda (left)
 */
-
+body{
+    margin: 0px;
+}
 h1{
     width: 400px;
     height: 200px;
@@ -22,4 +24,25 @@ h1{
     border-width: thick; /* thin - 1px* , medium . 3px , thick - 5px*/
     border-style: solid;
     border: 2px dashed blue;
+}
+
+.caja1 , .caja2{
+    background-color: chocolate;
+    border: medium solid orange;
+    
+    /*
+    Esto aplica para margin y padding
+    1 valor = aplicar a los 4 lados
+    2 valores= primer valor es para los lados verticales (t/b)  || segundo valor es para los lados horizontales (l/r)
+    3 valores= primer valor es para top  || segundo valor es para los lados horizontales (l/r) || tercer valor es para bottom
+    3 valores= primer valor es para top  || segundo valor es para right) || tercer valor es para bottom || cuarto valor es para left
+    */
+    padding: 20px;
+    margin: 20px;
+    padding: 20px 40px;
+    margin: 40px 20px;
+    padding: 0 40px 20px;
+    margin: 50px 30px 0;
+    padding: 0 40px 20px 50px;
+    margin: 100px 50px 30px 0;
 }
