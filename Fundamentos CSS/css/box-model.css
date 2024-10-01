@@ -150,3 +150,25 @@ Propiedad Display
     padding: 10px;
     float: left;
 }
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  /*Floats*/
+.container-floats{
+    background-color: cornflowerblue;
+}
+
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.clearfix{
+    clear: both;
+}
