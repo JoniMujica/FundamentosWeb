@@ -172,3 +172,12 @@ html {
 .clearfix{
     clear: both;
 }
+/*Colapso de margenes verticales*/
+.margin-colapse{
+    background-color: skyblue;
+}
+.margin-colapse section{
+    border: thin solid black;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
