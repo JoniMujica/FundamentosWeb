@@ -124,3 +124,47 @@ Para que este comportamiento funcione el elemento sticky debe ser hijo directo d
     position: sticky;
     top: 85px;
 }
+
+
+/* z-index: propiedad que permite controlar la profundidad de los elementos posicionados, su valor por defecto es auto, acepta número positivos, negativos y cero.
+
+A mayor valor el elemento esta más al frente, a menor valor más al fondo.
+
+Un elemento padre nunca podrá estar sobre sus elementos hijos, sin embargo los elementos hijos si pueden dándoles un valor negativo y que el elemento padre no tenga definido valor de z-index */
+
+.z-index-1,
+.z-index-2{
+    background-color: mediumaquamarine;
+    border: thin solid black;
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+.z-index-1{
+    z-index: 1;
+    z-index: 0;
+}
+.z-index-2{
+    top: -200px;
+    left: 100px;
+    z-index: 2;
+    z-index: -1;
+}
+
+.z-index-parent{
+    background-color: mediumorchid;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    /*z-index: 2; si quiero que el padre este adelante que el hijo, le quito el z-index al padre y le asigno un z-index negativo al hijo*/
+}
+
+.z-index-child{
+    background-color: mediumvioletred;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    top: -75px;
+    left: 75px;
+    z-index: -3; /*Asigno z-index negativo para que se muestre el padre por delante*/
+}
