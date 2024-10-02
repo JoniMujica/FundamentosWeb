@@ -40,3 +40,19 @@ body{
     margin-top: 0;
     margin-bottom: 0;
 }
+
+/*Ventana Modal*/
+.modal-window{
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    opacity: 0.5;
+    display: none;
+}
+.modal-window:target{
+    display: block;
+}
