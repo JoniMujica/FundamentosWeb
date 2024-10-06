@@ -37,3 +37,16 @@ html{
     font-size: 32px;
     border: thick solid rebeccapurple;
 }
+.ems{
+    background-color: cadetblue;
+    font-size: 24px;
+    padding: 1em .5em;
+    border: thick solid rebeccapurple;
+}
+.em-child{
+    background-color: salmon;
+    border: thick solid beige;
+    margin: .5em;
+    padding: 1em;
+    font-size: 2em;
+}
