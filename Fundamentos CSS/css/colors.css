@@ -105,3 +105,22 @@ Valor currentColor: Hereda el valor por defecto o asignado de la propiedad color
   color: olive;
   border: thick solid currentColor;
 }
+
+.opacity{
+  background-color: orchid;
+  color: navy;
+  border: thick solid black;
+  opacity: .75;
+}
+.opacity-00{
+  opacity: 0;
+}
+.opacity-10{
+  opacity: .1;
+}
+.opacity-20{
+  opacity: .2;
+}
+.opacity-30{
+  opacity: .3;
+}
