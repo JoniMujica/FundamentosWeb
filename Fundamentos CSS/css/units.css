@@ -22,15 +22,19 @@ Unidades de Medida
 
 html{
     box-sizing: border-box;
+    font-size: 20px;
+    font-size: 32px;
+    font-size: 16px;
+    background-color: black;
 }
-
+body{
+    background-color: blanchedalmond;
+}
 *,
 *::after,
 *::before{
     box-sizing: inherit;
-    font-size: 20px;
-    font-size: 16px;
-    font-size: 32px;
+    
 }
 .pixels{
     background-color: cadetblue;
@@ -86,4 +90,24 @@ html{
     background-color: cadetblue;
     width: 10ch;
 
+}
+
+.percentages{
+    background-color: darkkhaki;
+    padding: 5%;
+    width: 80%;
+    font-size: 100%;
+    margin: 20% 10%;
+    height: 100%;
+}
+
+.height-parent{
+    width: 500px;
+    height: 500px;
+    background-color: brown;
+}
+.height-child{
+    background-color: coral;
+    width: 50%;
+    height: 50%;
 }
