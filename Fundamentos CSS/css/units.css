@@ -28,6 +28,9 @@ html{
 *::after,
 *::before{
     box-sizing: inherit;
+    font-size: 20px;
+    font-size: 16px;
+    font-size: 32px;
 }
 .pixels{
     background-color: cadetblue;
@@ -63,4 +66,24 @@ html{
     margin: .5rem;
     padding: 1rem;
     font-size: 2rem;
+}
+
+.ex{
+    background-color: cadetblue;
+    font-size: 24px;
+    padding: 1ex .5ex;
+    border: thick solid rebeccapurple;
+}
+.ex-child{
+    background-color: salmon;
+    border: thick solid beige;
+    margin: .5ex;
+    padding: 1ex;
+    font-size: 2ex;
+}
+
+.chs{
+    background-color: cadetblue;
+    width: 10ch;
+
 }
