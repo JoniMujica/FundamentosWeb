@@ -8,6 +8,8 @@
 
 table,th,td{
     border: medium solid red;
+    
+    /*Esto funciona si border-colapse es "separate"*/
     border-spacing: 0;
     border-spacing: 1rem;
 }
