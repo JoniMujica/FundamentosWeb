@@ -1,0 +1,41 @@
+.list{
+    list-style-type: square;
+    list-style-type: disc; /*default*/
+    list-style-type: circle;
+    list-style-type: lower-roman;
+    list-style-type: upper-roman;
+    list-style-type: decimal;
+    list-style-type: decimal-leading-zero;
+    list-style-type: none;
+    list-style-type: lower-greek;
+    list-style-image: url("../assets/favicon.png");
+    list-style-image: url("../assets/cielo.png");
+    list-style-image: none; /*default*/
+
+}
+
+.list li{
+    list-style-type: none;
+}
+
+.list li::before{
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+    background-image: url("../assets/favicon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.list2 li{
+    background-color: coral;
+    list-style-position: inside;
+    list-style-position: outside;
+}
+
+.list3 li{
+    background-color: cornsilk;
+    list-style: lower-latin outside;
+}
