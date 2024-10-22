@@ -1,0 +1,13 @@
+.table{
+    font-size: 3rem;
+    border-collapse: collapse; /*con esto, border-spacing no funciona*/
+    border-collapse: separate; /*default*/
+    empty-cells: hide;
+    empty-cells: show; /*default*/
+}
+
+table,th,td{
+    border: medium solid red;
+    border-spacing: 0;
+    border-spacing: 1rem;
+}
