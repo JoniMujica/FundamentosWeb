@@ -30,3 +30,17 @@
     height: 400px;
     border-radius: 50%;
 }
+
+
+.outline{
+    color: white;
+    text-align: center;
+    outline-width: 5px;
+    outline-style: dashed;
+    outline-color: chartreuse;
+    outline: thick solid blue;
+    /*border-width: 100px;
+    outline-width: 100px;*/
+    outline-offset: 3rem;
+    outline-offset: -1rem;
+}
