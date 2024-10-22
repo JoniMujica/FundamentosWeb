@@ -52,3 +52,7 @@ html{
     width: min(300px,20vw);
     height: max(200px,25vh);
 }
+
+h1{
+    font-size: clamp(2rem,1rem + 3vw , 3rem);
+}
