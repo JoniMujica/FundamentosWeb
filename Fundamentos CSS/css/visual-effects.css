@@ -93,3 +93,13 @@ html{
 
     background-image: radial-gradient(circle 100px, red 50%, white 50%);
 }
+
+.conic-gradient{
+    background-image: conic-gradient(red,green);
+    background-image: conic-gradient(red,green,blue);
+    background-image: conic-gradient(red 0deg 90deg,green 120deg 240deg,blue 270deg);
+    background-image: conic-gradient(from 90deg,red 0deg 90deg,green 120deg 240deg,blue 270deg);
+    background-image: conic-gradient(from 180deg,red 0deg 90deg,green 120deg 240deg,blue 270deg);
+    background-image: conic-gradient(from 270deg,red 0deg 90deg,green 120deg 240deg,blue 270deg);
+    background-image: conic-gradient(from 90deg,red 0deg 120deg, white 120deg 240deg, blue 240deg);
+}
