@@ -115,3 +115,12 @@ background-image: repeating-radial-gradient(circle 4rem,cyan 0 10px,magenta 10px
 .repeat-gradiant-conic{
     background-image: repeating-conic-gradient(red 0 8%, yellow 8% 16%, black 16% 24%);
 }
+
+.chart-gradient{
+    background-image: conic-gradient(cyan 0% 50%,magenta 50% 80%,yellow 80%);
+    border-radius: 50%;
+}
+.donut-gradient{
+    background-image: radial-gradient(white 40%,black 41% ,transparent 43%), conic-gradient(cyan 0% 50%,magenta 50% 80%,yellow 80%);
+    border-radius: 50%;
+}
