@@ -103,3 +103,15 @@ html{
     background-image: conic-gradient(from 270deg,red 0deg 90deg,green 120deg 240deg,blue 270deg);
     background-image: conic-gradient(from 90deg,red 0deg 120deg, white 120deg 240deg, blue 240deg);
 }
+
+.repeat-gradiant-linear{
+    background-image: repeating-linear-gradient(red 0 5px,green 10px 20px, blue 20px 30px);
+    background-image: repeating-linear-gradient(45deg,red 0 5px,green 10px 20px, blue 20px 30px);
+    background-image: repeating-linear-gradient(90deg,red 0 5px,green 10px 20px, blue 20px 30px);
+}
+.repeat-gradiant-radial{
+background-image: repeating-radial-gradient(circle 4rem,cyan 0 10px,magenta 10px 20px, yellow 20px 30px);
+}
+.repeat-gradiant-conic{
+    background-image: repeating-conic-gradient(red 0 8%, yellow 8% 16%, black 16% 24%);
+}
