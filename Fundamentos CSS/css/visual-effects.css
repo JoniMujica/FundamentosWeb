@@ -124,3 +124,85 @@ background-image: repeating-radial-gradient(circle 4rem,cyan 0 10px,magenta 10px
     background-image: radial-gradient(white 40%,black 41% ,transparent 43%), conic-gradient(cyan 0% 50%,magenta 50% 80%,yellow 80%);
     border-radius: 50%;
 }
+
+.card{
+    border: thick solid #000;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 400px;
+    margin-bottom: 5rem;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 50%;
+
+    filter: blur(1rem);
+    filter: blur(.25rem);
+    filter: blur(.15rem);
+
+    filter: brightness(.75);
+    filter: brightness(.5);
+    filter: brightness(.25);
+    filter: brightness(0);
+    filter: brightness(2);
+    filter: brightness(4);
+
+    filter: contrast(0);
+    filter: contrast(.25);
+    filter: contrast(.5);
+    filter: contrast(.75);
+    filter: contrast(1);
+    filter: contrast(2);
+    filter: contrast(4);
+
+    filter: grayscale(0);
+    filter: grayscale(.25);
+    filter: grayscale(.5);
+    filter: grayscale(.75);
+    filter: grayscale(1);
+
+    filter: sepia(0);
+    filter: sepia(0.25);
+    filter: sepia(0.5);
+    filter: sepia(0.75);
+    filter: sepia(1);
+    filter: sepia(2);
+
+    filter: hue-rotate(0deg);
+    filter: hue-rotate(30deg);
+    filter: hue-rotate(60deg);
+    filter: hue-rotate(90deg);
+    filter: hue-rotate(120deg);
+    filter: hue-rotate(150deg);
+    filter: hue-rotate(180deg);
+    filter: hue-rotate(210deg);
+    filter: hue-rotate(240deg);
+    filter: hue-rotate(270deg);
+    filter: hue-rotate(300deg);
+    filter: hue-rotate(330deg);
+    
+    filter: invert(0);
+    filter: invert(0.25);
+    filter: invert(0.5);
+    filter: invert(0.75);
+    filter: invert(1);
+    
+    filter: opacity(0);
+    filter: opacity(0.25);
+    filter: opacity(0.5);
+    filter: opacity(0.75);
+    filter: opacity(1);
+
+    filter: saturate(0);
+    filter: saturate(.25);
+    filter: saturate(.5);
+    filter: saturate(.75);
+    filter: saturate(1);
+    filter: saturate(4);
+    filter: drop-shadow(1rem 1rem 1rem orangered);  /*Esta propiedad no acepta multiples sombras*/
+
+}
