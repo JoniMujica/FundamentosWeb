@@ -258,3 +258,13 @@ background-image: repeating-radial-gradient(circle 4rem,cyan 0 10px,magenta 10px
     background-color: rgba(255, 102, 255, .5);
     backdrop-filter: blur(1rem) hue-rotate(240deg) opacity(.75) invert(1);
 }
+
+.dark-mode{
+    background-color: #fff;
+    color: #000;
+    filter: invert(1);
+}
+
+.dark-mode img{
+    filter: invert(1);
+}
