@@ -316,3 +316,49 @@ background-image: repeating-radial-gradient(circle 4rem,cyan 0 10px,magenta 10px
     background-blend-mode: overlay;
     background-blend-mode: darken;
 }
+
+.clip-path{
+    /*clip-path: circle();
+    clip-path: circle(2rem);
+    clip-path: circle(100px at top);
+    clip-path: circle(100px at left);
+    clip-path: circle(100px at right);
+    clip-path: circle(100px at bottom);
+    clip-path: circle(100px at left bottom);
+    clip-path: circle(100px at right bottom);
+    clip-path: circle(100px at left top);
+    clip-path: circle(100px at right top);
+    clip-path: circle(100px at 0 0);
+    clip-path: circle(100px at 30%);
+    clip-path: circle(100px at 20% 60%);
+
+    clip-path: ellipse();
+    clip-path: ellipse(1rem 2rem);
+    clip-path: ellipse(2rem 1rem);
+    clip-path: ellipse(100px 50px at left);
+    clip-path: ellipse(100px 50px at right);
+    clip-path: ellipse(100px 50px at top);
+    clip-path: ellipse(100px 50px at bottom);
+    clip-path: ellipse(100px 50px at left bottom);
+    clip-path: ellipse(100px 50px at right bottom);
+    clip-path: ellipse(100px 50px at left top);
+    clip-path: ellipse(100px 50px at right top);
+    clip-path: ellipse(100px 50px at 0 0);
+    clip-path: ellipse(100px 50px at 300px 50px);
+    clip-path: ellipse(100px 50px at 18% 60%);
+
+    clip-path: inset(2rem);
+    clip-path: inset(4rem);
+    clip-path: inset(2rem 1rem);
+    clip-path: inset(3rem 2rem 1rem);
+    clip-path: inset(3rem 2rem 1rem .5rem);
+    clip-path: inset(1rem round 1rem);
+    clip-path: inset(1rem round 1rem 2rem);
+    clip-path: inset(1rem round 1rem 2rem 3rem);
+    clip-path: inset(1rem round 1rem 2rem 3rem 4rem);
+
+    clip-path: polygon(0 0, 100% 0,50% 100%);
+    clip-path: polygon(41% 50%, 38% 29%, 58% 9%, 73% 22%, 77% 62%, 97% 75%, 35% 71%);*/
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+
+}
