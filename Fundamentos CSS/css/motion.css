@@ -164,4 +164,13 @@ Transiciones
     transform: perspective(10rem) translateZ(-4rem);
     transform: translateZ(4rem);
     transform: translateZ(-4rem);
+    transform: translate3d(2rem,50%,-3rem);
+    transform: scaleZ(1.5);
+    transform: scale3d(2,.5,3);
+
+    transform: rotateX(90deg);
+    transform: rotateY(90deg);
+
+    transform: rotate3d(1,.5,0,-45deg);
+    transform: rotate3d(-1,2.5,-2,60deg);
 }
