@@ -177,4 +177,8 @@ Transiciones
     /* https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d() */
     transform: matrix3d(1, 0, 0, 0, 0, 1, 6, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
 
+    /*TRANSFORMACIONES 3D MULTIPLES*/
+    transform: rotate3d(-1,2.5,-2,60deg) translate3d(2rem,50%, -3rem) scale(2,.5,3);
+
+
 }
