@@ -58,3 +58,37 @@ Los hijos deben tener setteado la propiedad "scroll-snap-align" SI O SI
     font-size: 3vw;
     color: #d9e8f0;
 }
+
+.carousel{
+    border: thick solid #d938f0;
+    display: flex;
+    width: 50%;
+    height: 50vh;
+    overflow-x: hidden;
+}
+
+.carousel-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 100%);
+    overflow-x: scroll;
+    overflow-y: hidden; /*Esto para que no se genere una barra de desplazamiento*/
+    scroll-snap-type: x mandatory;
+    scroll-snap-type: inline mandatory;
+    scroll-snap-type: both proximity;
+}
+
+.carousel-slide{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #108eb4;
+    scroll-snap-align: none;
+    scroll-snap-align: start;
+    scroll-snap-align: end;
+    scroll-snap-align: center;
+}
+.carousel-slide:nth-child(even){
+    background-color:#1e2345;
+}
