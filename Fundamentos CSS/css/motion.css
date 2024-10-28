@@ -52,6 +52,7 @@ Transiciones
 
 .transitions .box{
     background-color: magenta;
+    border-color: green;
     transition-property: background-color;
     transition-duration: 500ms;
     transition-timing-function: ease;
@@ -66,7 +67,7 @@ Transiciones
     background-color: cyan;
     border-color:red;
     border-radius: 2rem;
-    border-style: dashed; /*no animable*/
+    /*border-style: dashed; /*no animable*/
 }
 
 
