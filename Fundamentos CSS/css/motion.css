@@ -276,5 +276,31 @@ Transiciones
 .my-animation{
   /*animation: name duration timing-function delay iteration-count direction fill-mode play-state;*/
   animation-name: myAwesomeAnimation;
-  animation-duration: 3s;
+  animation-duration: 2s;
+  /*https://cubic-bezier.com/*/
+  animation-timing-function: cubic-bezier(1,0,0,1);
+  animation-timing-function: cubic-bezier(0,.99,.9,.13);
+  animation-timing-function: ease-in-out;
+  animation-delay: 1500ms;
+  animation-delay: 0;
+  animation-iteration-count: 3;
+  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
+  animation-direction: reverse;
+  animation-direction: alternate;
+  animation-direction: alternate-reverse;
+  animation-direction: normal;
+
+  /*Al final de la animacion se queda con los estilos finales de la animacion*/
+  animation-fill-mode: forwards;
+
+  /*Al inicio de la animacion se queda con los estilos iniciales de la animacion*/
+  animation-fill-mode: backwards;
+  /*both aplica al mismo tiempo forwards y backwards*/
+  animation-fill-mode: both;
+
+  animation-play-state: paused;
+  animation-play-state: running;
+
+  animation: myAwesomeAnimation 1.5s ease 250ms 7 alternate both running;
 }
