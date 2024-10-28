@@ -59,4 +59,29 @@ Transiciones
     background-color: cyan;
     border-color:red;
     border-radius: 2rem;
+    border-style: dashed; /*no animable*/
+}
+
+
+.transitions .card{
+
+    transition: opacity 2s ease-out,
+    border-color 3s steps(3),
+    filter 2s ease-in 1s,
+    box-shadow 1.5s linear 2s;
+}
+
+.transitions .card:hover{
+    opacity: .75;
+    border-color: orchid;
+    filter: blur(.15rem);
+    box-shadow: 1rem 1rem 2rem .5rem #000;
+}
+
+.transitions .card img{
+    transition: object-position 2s ease 3s;
+}
+
+.transitions .card img:hover{
+    object-position: 100% 50%;
 }
