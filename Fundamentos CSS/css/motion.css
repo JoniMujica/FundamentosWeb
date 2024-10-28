@@ -93,3 +93,46 @@ Transiciones
 .transitions .card img:hover{
     object-position: 100% 50%;
 }
+
+.transform-2d img{
+    transition: transform 2s ease-in-out;
+}
+
+.transform-2d img:hover{
+    transform: none;
+    transform: translateX(4rem);
+    transform: translateY(4rem);
+    transform: translateY(-4rem);
+    transform: translateZ(4rem); /*pendiente.... hace movimiento en el eje Z*/
+
+
+    /*Translacion*/
+    transform: translate(-4rem,4rem);
+    transform: translate(50%,50%);
+    transform: translate(-50%,-50%);
+    transform: translate(-50%,200px);
+
+    /*Escala*/
+    transform: scaleX(2);
+    transform: scaleY(.5);
+    transform: scaleZ(1.5);
+    transform: scale(1.5,1.5);
+    transform: scale(-.5,-.5); /*Invierte la imagen*/
+
+    /*Rotacion*/
+    transform: rotateX(60deg);
+    transform: rotateX(90deg);
+    transform: rotateY(60deg);
+    transform: rotateY(90deg);
+    transform: rotateZ(60deg);
+    transform: rotateZ(-60deg);
+    transform: rotateZ(360deg);
+
+    /**/
+    transform: skewX(30deg); /*Esto tmb va en grados*/
+    transform: skewX(-20deg);
+    transform: skewY(20deg);
+    transform: skewY(-20deg);
+    transform: skew(20deg,20deg);
+    
+}
