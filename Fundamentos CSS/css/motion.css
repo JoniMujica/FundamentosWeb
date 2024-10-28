@@ -144,3 +144,24 @@ Transiciones
     transform: translate(25%,-50%) rotate(240deg) skew(10deg,20deg) scale(-.5,-.5);
 
 }
+
+.transform-3d{
+    perspective: 10rem; /*Esta es otra forma de darle perspectiva*/
+}
+
+.transform-3d img{
+    transition: transform 2s ease-in-out;
+}
+
+.transform-3d img:hover{
+
+    /*Para activar el eje Z, debemos activar la perspectiva indicando el fondo del eje Z*/
+    transform: translateZ(4rem);
+    transform: perspective(1000px) translateZ(4rem);
+    transform: perspective(100rem) translateZ(4rem);
+    transform: perspective(10rem) translateZ(4rem);
+    transform: perspective(1rem) translateZ(4rem);
+    transform: perspective(10rem) translateZ(-4rem);
+    transform: translateZ(4rem);
+    transform: translateZ(-4rem);
+}
