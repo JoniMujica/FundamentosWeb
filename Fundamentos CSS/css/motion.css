@@ -135,4 +135,12 @@ Transiciones
     transform: skewY(-20deg);
     transform: skew(20deg,20deg);
 
+
+      /* https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/matrix3d() */
+    transform: matrix3d(1, 0, 0, 0, 0, 1, 6, 0, 0, 0, 1, 0, 50, 100, 0, 1.1);
+
+    /*Transformaciones 2D multiples*/
+    transform: translate(25%,-50%);
+    transform: translate(25%,-50%) rotate(240deg) skew(10deg,20deg) scale(-.5,-.5);
+
 }
