@@ -1,39 +1,44 @@
-html{
+html {
     box-sizing: border-box;
     font-family: sans-serif;
     font-size: 16px;
-}
-
-*,*::after,*::before{
-    box-sizing:inherit;
-}
-
-.box{
+    overflow-x: hidden;
+  }
+  
+  *,
+  *::after,
+  *::before {
+    box-sizing: inherit;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .box {
     border: thick solid #000;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5rem;
     width: 200px;
     height: 200px;
-    margin-bottom: 5rem;
-}
-
-
-.card{
+  }
+  
+  .card {
     border: thick solid #000;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 5rem;
     width: 600px;
     height: 400px;
-    margin-bottom: 5rem;
-}
-
-.card img{
+  }
+  
+  .card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: 0 50%;
-}
-
+  }
 /* 
 Transiciones
   transition-property
@@ -53,6 +58,8 @@ Transiciones
     transition-delay: 0.5s;
     transition: border-color 3s linear 1s;
     transition: all 2s ease-in-out 250ms; /*Esto para que todas las transiciones anden*/
+    transition: background-color 2s ease-in-out 250ms,
+    border-color 2s ease-in-out 250ms, border-radius 2s ease-in-out 250ms
 }
 
 .transitions .box:hover{
