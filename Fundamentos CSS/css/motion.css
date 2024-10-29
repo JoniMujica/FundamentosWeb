@@ -714,3 +714,61 @@ animation: myAwesomeAnimation2 1s;
 .off-canvas-btn:checked ~ .off-canvas-menu{
   transform: translate(0,0);
 }
+
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 997;
+  background-color: #0008;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 500ms ease-in-out;
+}
+
+.modal:target{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-container{
+  position: relative;
+  border: thick double #d00;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 70%;
+  height: 70vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  overflow: hidden;
+}
+
+.modal-close{
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 3rem;
+  height: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #d00;
+  text-align: center; /*Centrado Horizontal*/
+  line-height: 3rem;
+  text-decoration: none;
+  border-radius: 50%;
+
+  transition: background-color 300ms linear, transform 300ms ease-in-out;
+}
+
+.modal-close:hover{
+  background-color: #a00;
+  transform:  scale(1.2);
+}
