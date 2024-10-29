@@ -502,3 +502,27 @@ animation: myAwesomeAnimation2 1s;
   border-left-color: #09f;
   animation: spinner 1s ease-in-out infinite;
 }
+
+
+.btn{
+  position: relative;
+  border: none;
+  border-radius: .25rem;
+  padding: .2rem;
+  width: 15rem;
+  height: 2.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  overflow: hidden;
+  box-shadow: .25rem .25rem .5rem .25rem rgba(0, 0, 0, 0.3);
+}
+
+.anim-bottom::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+  height: .25rem;
+  background-color: #d00;
+}
