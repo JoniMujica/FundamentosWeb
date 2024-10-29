@@ -337,3 +337,32 @@ animation: myAwesomeAnimation2 2s;
 animation: myAwesomeAnimation2 5s;
 animation: myAwesomeAnimation2 1s;
 }
+
+
+@keyframes multipleAnimation1 {
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes multipleAnimation2 {
+  0%{
+    transform: translateY(0%);
+  }
+  50%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+.animation-multiple{
+  animation: multipleAnimation1 2s infinite;
+  animation: multipleAnimation1 2s infinite, multipleAnimation2 1s 3 ease-in-out;
+}
