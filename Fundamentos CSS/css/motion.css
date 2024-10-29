@@ -555,3 +555,46 @@ animation: myAwesomeAnimation2 1s;
 .anim-bg-gradient:hover{
   background-position: 100%;
 }
+
+
+.tabs-menu{
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  width: 70%;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ddd;
+}
+
+.tabs-menu input[type="radio"]{
+  display: none;
+}
+
+.tabs-menu label{
+  position: relative;
+  z-index: 1;
+  width: calc(100% / 4 - .5rem);
+  text-align: center;
+  cursor: pointer;
+}
+
+.tabs-menu label:hover{
+  color:white;
+}
+
+.tabs-menu input[type="radio"]:checked+label{
+  color: #fff;
+}
+
+.tab-bg-hover{
+  position: absolute;
+  width: calc(100% / 4 - .5rem);
+  height: 2rem;
+  border-radius: .5rem;
+  background-image: linear-gradient(90deg, #a00,#d00);
+}
