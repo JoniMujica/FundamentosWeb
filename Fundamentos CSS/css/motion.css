@@ -597,4 +597,19 @@ animation: myAwesomeAnimation2 1s;
   height: 2rem;
   border-radius: .5rem;
   background-image: linear-gradient(90deg, #a00,#d00);
+  transition: transform 300ms ease-in-out;
+}
+
+
+#tab1:checked~ .tab-bg-hover{
+  transform: translateX(0);
+}
+#tab2:checked~ .tab-bg-hover{
+  transform: translateX(100%);
+}
+#tab3:checked~ .tab-bg-hover{
+  transform: translateX(200%);
+}
+#tab4:checked~ .tab-bg-hover{
+  transform: translateX(300%);
 }
