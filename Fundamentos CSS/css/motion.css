@@ -525,4 +525,24 @@ animation: myAwesomeAnimation2 1s;
   width: 0;
   height: .25rem;
   background-color: #d00;
+  transition: width .5s ease, left .5s ease, right 0.5s ease;
+}
+
+.anim-bottom:hover::after{
+  width: 100%;
+}
+
+.to-left::after{
+  left:0;
+}
+
+.to-center::after{
+  left: 50%;
+}
+.to-center:hover::after{
+  left: 0;
+}
+
+.to-right::after{
+  right:0;
 }
