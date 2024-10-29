@@ -480,3 +480,25 @@ animation: myAwesomeAnimation2 1s;
   transform: rotate(45deg);
   transform-origin: 100% 100%;
 }
+
+
+@keyframes spinner {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.spinner{
+  /*background-color: #d00;*/
+  width: 5vw;
+  height: 5vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+  border: .5vw solid rgba(0, 0, 0, 0.1);
+  border-left-color: #09f;
+  animation: spinner 1s ease-in-out infinite;
+}
