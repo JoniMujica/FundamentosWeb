@@ -546,3 +546,12 @@ animation: myAwesomeAnimation2 1s;
 .to-right::after{
   right:0;
 }
+
+.anim-bg-gradient{
+  background-image: linear-gradient(to right, pink,violet,orange,orangered);
+  background-size: 300% 100%;
+  transition: background-position .5s ease-in-out;
+}
+.anim-bg-gradient:hover{
+  background-position: 100%;
+}
