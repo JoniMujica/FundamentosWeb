@@ -304,3 +304,36 @@ Transiciones
 
   animation: myAwesomeAnimation 1.5s ease 250ms 7 alternate both running;
 }
+
+@keyframes myAwesomeAnimation2 {
+
+  /*from*/
+  0%{
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  50%{
+    opacity: .5;
+    transform: translateX(-50%);
+  }
+  
+  75%{
+    transform: translateX(-75%);
+    
+  }
+
+  /*to*/
+  100%{
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  
+}
+
+.my-animation2{
+
+animation: myAwesomeAnimation2 2s;
+animation: myAwesomeAnimation2 5s;
+animation: myAwesomeAnimation2 1s;
+}
