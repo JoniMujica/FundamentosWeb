@@ -366,3 +366,34 @@ animation: myAwesomeAnimation2 1s;
   animation: multipleAnimation1 2s infinite;
   animation: multipleAnimation1 2s infinite, multipleAnimation2 1s 3 ease-in-out;
 }
+
+
+
+/*EJEMPLOS*/
+
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+
+.fade-in{
+  font-size: 5vw;
+  animation: fadeIn 2s linear 2s infinite alternate both;
+}
+.fade-out{
+  font-size: 5vw;
+  animation: fadeOut 2s linear 2s infinite alternate both;
+}
