@@ -5,12 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprendiendo Flexbox</title>
     <style>
+        *,*::after,*::before{
+            box-sizing: border-box;
+        }
+
         .container{
             background-color: #333;
-            display: flex;
+            height: 30vh;
+
+
+
             display: inline-flex;
+            display: flex;
+            flex-direction: column;
+            flex-direction: column-reverse;
+            flex-direction: row;/*def*/
+            flex-direction: row-reverse;
+            
+            flex-wrap: nowrap; /*def*/
+            flex-wrap: wrap;
+            flex-wrap: wrap-reverse; /*Envuelve en el orden inverso*/
+
+            flex-flow: column wrap; /*Es un shortcut de flexdirection y flex-wrap*/
+            
         }
         .item{
+            border: medium solid #999;
+            width: 20%;
+            height: 20%;
             background-color: #666;
         }
     </style>
@@ -21,10 +43,33 @@
         <article class="item">Flex Items 2</article>
         <article class="item">Flex Items 3</article>
     </section>
+    <br><br><br><br>
     <section class="container">
-        <article class="item">Flex Items 1</article>
-        <article class="item">Flex Items 2</article>
-        <article class="item">Flex Items 3</article>
+        <article class="item">Flex Items 4</article>
+        <article class="item">Flex Items 5</article>
+        <article class="item">Flex Items 6</article>
+    </section>
+    <br><br><br><br>
+    <section class="container">
+        <article class="item">Item 1</article>
+        <article class="item">Item 2</article>
+        <article class="item">Item 3</article>
+        <article class="item">Item 4</article>
+        <article class="item">Item 5</article>
+        <article class="item">Item 6</article>
+        <article class="item">Item 7</article>
+        <article class="item">Item 8</article>
+        <article class="item">Item 9</article>
+        <article class="item">Item 10</article>
+        <article class="item">Item 11</article>
+        <article class="item">Item 12</article>
+        <article class="item">Item 13</article>
+        <article class="item">Item 14</article>
+        <article class="item">Item 15</article>
+        <article class="item">Item 16</article>
+        <article class="item">Item 17</article>
+        <article class="item">Item 18</article>
+        <article class="item">Item 19</article>
     </section>
 </body>
 </html>
