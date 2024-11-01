@@ -60,6 +60,17 @@
             /*Es un shorthand de las propiedades flex-drow flex-shrink y flex-basis, en ese orden*/
             flex: 0 1 200px;
 
+
+            /*Representa el orden que tendran loe elementos hijos en la caja flexbox
+            Valor por defecto 0 
+            Se aceptan valores positivos y negativos
+            Un valor menor siempre ira antes que un valor mayor*/
+            order: 0;
+
+            /*Sobreescribe el valor de la propiedad align-items solo para el elemento hijo especificado
+            valores:
+            strech | flex-start | flex-end | center | baseline*/
+            align-self: stretch;
         }
         /*.item:nth-child(2),.item:nth-child(17){
             font-size: 250%;
@@ -68,9 +79,13 @@
         .item:nth-child(2){
             /*flex-grow: 3;*/
             /*flex-shrink: 2;*/
+            order: -1;
         }
         .item:nth-child(3){
             /*flex-grow: 2;*/
+            align-self: flex-end;
+            align-self: flex-start;
+            align-self: center;
         }
     </style>
 </head>
@@ -79,6 +94,8 @@
         <article class="item">Flex Items 1</article>
         <article class="item">Flex Items 2</article>
         <article class="item">Flex Items 3</article>
+        <article class="item">Flex Items 4</article>
+        <article class="item">Flex Items 5</article>
     </section>
 
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
