@@ -13,7 +13,7 @@
 
         .container {
         background-color: #333;
-        height: 30vh;
+        height: 400px;
         width: 100%;
 
         display: flex;
@@ -49,16 +49,25 @@
             /*Cuando la caja flexbox NO tenga espacio sobrante, es la habilidad o factor de encogerse, valor por defecto es 1, No se aceptan valores negativos*/
             flex-shrink: 1;
 
-            /**/
+            /*Es el tmaaño del elemento hijo dentro de la linea de la caja flexbox
+            Si la caja flexbox tiene direccion de fila, flex-basis representa el width
+            Si la caja flexbox tiene direccion de columna, flex-basis representa el height
+            valor por defecto auto*/
+            flex-basis: 100px;
             flex-basis: auto;
+
+
+            /*Es un shorthand de las propiedades flex-drow flex-shrink y flex-basis, en ese orden*/
+            flex: 0 1 200px;
+
         }
         /*.item:nth-child(2),.item:nth-child(17){
             font-size: 250%;
         }*/
-
+        /*79.77*/
         .item:nth-child(2){
             /*flex-grow: 3;*/
-            flex-shrink: 2;
+            /*flex-shrink: 2;*/
         }
         .item:nth-child(3){
             /*flex-grow: 2;*/
