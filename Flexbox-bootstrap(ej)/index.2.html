@@ -13,6 +13,10 @@
             margin: 0;
             padding: 0;
         }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
         main{
             flex-grow: 1;
         }
@@ -60,6 +64,16 @@
           font-size: 5vw;
         }
 
+        .flex-responsive{
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        .flex-responsive-item{
+            border: thin solid #f60;
+            flex: 1 1 200px;
+        }
+
         @media screen and (min-width: 1024px) {
             .header{
                 display: flex;
@@ -71,6 +85,22 @@
             }
             .menu li{
                 padding: .5rem;
+            }
+
+            .flex-container{
+                display: flex;
+                align-items: center;
+            }
+            .flex-item{
+                flex: 0 0 50%;
+            }
+
+            .flex-order1{
+                order: 1;
+            }
+
+            .flex-row-reverse{
+                flex-direction: row-reverse;
             }
         }
 
@@ -90,12 +120,52 @@
         </nav>
     </header>
     <main>
-        <h2>Contenido</h2>
         <article class="hero-image">
             <div>
                 <h1>Flexbox is fuckin' COOL</h1>
             </div>
         </article>
+        <section class="flex-container">
+            <article class="flex-item">
+                <h2>Titulo</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sed culpa excepturi laboriosam quo itaque debitis quasi saepe praesentium numquam ex, distinctio labore consequuntur enim laborum sunt magnam porro tempora?</p>
+            </article>
+            <article class="flex-item">
+                <img src="https://loremflickr.com/400/400" alt="Gatitos">
+            </article>
+        </section>
+        <section class="flex-container flex-row-reverse">
+            <!--<article class="flex-item flex-order1">-->
+            <article class="flex-item">
+                <h2>Titulo</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse sed culpa excepturi laboriosam quo itaque debitis quasi saepe praesentium numquam ex, distinctio labore consequuntur enim laborum sunt magnam porro tempora?</p>
+            </article>
+            <article class="flex-item">
+                <img src="https://loremflickr.com/400/400" alt="Gatitos">
+            </article>
+        </section>
+        <h2>Responsive sin Media Queries con Flexbox</h2>
+        <section class="flex-responsive">
+            <article class="flex-responsive-item">Item Responsivo 1</article>
+            <article class="flex-responsive-item">Item Responsivo 2</article>
+            <article class="flex-responsive-item">Item Responsivo 3</article>
+            <article class="flex-responsive-item">Item Responsivo 4</article>
+            <article class="flex-responsive-item">Item Responsivo 5</article>
+            <article class="flex-responsive-item">Item Responsivo 6</article>
+            <article class="flex-responsive-item">Item Responsivo 7</article>
+            <article class="flex-responsive-item">Item Responsivo 8</article>
+            <article class="flex-responsive-item">Item Responsivo 9</article>
+            <article class="flex-responsive-item">Item Responsivo 10</article>
+            <article class="flex-responsive-item">Item Responsivo 11</article>
+            <article class="flex-responsive-item">Item Responsivo 12</article>
+            <article class="flex-responsive-item">Item Responsivo 13</article>
+            <article class="flex-responsive-item">Item Responsivo 14</article>
+            <article class="flex-responsive-item">Item Responsivo 15</article>
+            <article class="flex-responsive-item">Item Responsivo 16</article>
+            <article class="flex-responsive-item">Item Responsivo 17</article>
+            <article class="flex-responsive-item">Item Responsivo 18</article>
+            <article class="flex-responsive-item">Item Responsivo 19</article>
+        </section>
     </main>
     <footer class="titulares">
         <h2>StickyFooter</h2>
