@@ -163,10 +163,26 @@
         console.log(verdadero,falso,v,f);
         console.log(typeof verdadero,typeof falso);
 
-        console.log(Boolean(0));
-        console.log(Boolean(-1));
-        console.log(Boolean(""));
-        console.log(Boolean(" "));
+        console.log(Boolean(0)); //false
+        console.log(Boolean(-1)); //true
+        console.log(Boolean("")); //false
+        console.log(Boolean(" ")); //true
+        
+
+        //UNDEFINED NULL NAN
+        //undefined indica que no se ha inicializado una variable y que el valor esta ausente
+        let indefinida;
+        console.log(indefinida);
+        //null es un valor especial que indica la ausencia de un valor
+        let nulo = null;
+        console.log(nulo);
+
+
+        //NaN - Not a Number
+        let noEsNumero = "Hola" * 3.7;
+        console.log(noEsNumero);
+        
+        
         
         
         
