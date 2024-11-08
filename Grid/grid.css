@@ -135,3 +135,32 @@ html {
   /*grid-area: linea-r3 / linea-r4 / linea-c1 / linea-c4; LOS NOMBRES NO FUNCIONA CON GRID AREA */
   
 }
+
+/* GRID AREASSSSSSSSSSSSSSSSSSSS*/
+
+.grid-areas{
+  display: grid;
+  /*Grid 2cx3r*/
+  grid-template-columns: 1fr 200px;
+  /*grid-template-rows: 100px 1fr 60px;*/
+  grid-template-rows: 100px repeat(2,1fr) 60px;
+  grid-template-areas: 
+  "header header"
+  "content sidebar"
+  "content ." /*Cuando ponemos . en grid area, significa que deje esa celda vacia...*/
+  "footer footer";
+}
+
+.header{
+  grid-area: header;
+}
+.content{
+  grid-area: content;
+}
+.sidebar{
+  grid-area: sidebar;
+}
+.footer{
+  grid-area: footer;
+}
+
