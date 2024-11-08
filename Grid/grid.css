@@ -140,6 +140,7 @@ html {
 
 .grid-areas{
   display: grid;
+
   /*Grid 2cx3r*/
   grid-template-columns: 1fr 200px;
   /*grid-template-rows: 100px 1fr 60px;*/
@@ -164,3 +165,25 @@ html {
   grid-area: footer;
 }
 
+/*Grid Implicita Grids de bloque y de linea*/
+.grid-implicit{
+  /*Grid de 4cx3r*/
+  width: 40%;
+  display: inline-grid;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(3,200px);
+}
+
+
+/*Flujo de la Grid (Grid Flow)*/
+.grid-flow{
+  display: grid;
+  /*Grid de 5cx4r*/
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(3,150px);
+  grid-auto-flow: row; /*Def*/
+  grid-auto-rows: 100px; /*Def*/ /*Para todas las filas que se generen implicitamente (dinamicamente) quiero que tenga un valor en especifico*/
+  grid-auto-flow: column;
+  grid-auto-columns: 50px;
+}
