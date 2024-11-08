@@ -7,6 +7,13 @@
 </head>
 <body>
     <h1>Fundamentos JavaScript</h1>
+
+    <ul>
+        <li>Primavera</li>
+        <li>Verano</li>
+        <li>Otoño</li>
+        <li>Invierno</li>
+    </ul>
     <script>
         /*var hola = "Hola mundo"; // (var:tiene un alcance global) NO RECOMENDABLE USAR
         let hello = "Hello Word"; //Ambito de bloque (solo existe en el documento, dentro del bloque en la que se definio)
@@ -67,8 +74,11 @@
         console.log(colores);*/
         
 
+
+
+
         //CADENAS DE TEXTO AKA STRING
-        let nombre = "Jon";
+        /*let nombre = "Jon";
         let apellido = "Mircha";
         let saludo = new String("Hola Mundo");
         let loren =  "       Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eius unde corporis tempore voluptates odit et suscipit eum impedit deserunt ratione, error iusto doloremque recusandae aliquam nam similique quis architecto?         "
@@ -84,8 +94,41 @@
             loren.trim(), //quita los espacios en blanco
             loren.split(" " ), //Separa en un array, las palabras por espacios que tenga
             loren.split(","),  //Separa en un array, las palabras por coma que tenga
-        );
-        
+        );*/
+
+
+        //TEMPLATES STRINGS
+        let nombre = "Jon";        
+        let apellido = "Mircha";
+        //concatenacion
+        let saludo = "Hola, Mi nombre es "+nombre + " " + "" + apellido + ".";
+        console.log(saludo)
+
+        //Interpólacion de variables
+        //Template String
+        let saludo2 = `Hola, mi nombre es ${nombre} ${apellido}.`;
+        console.log(saludo2);
+
+        let ul = "<ul><li>Primavera</li><li>Verano</li><li>Otoño</li><li>Invierno</li></ul>";
+        console.log(ul)
+        //Las templates strings si nos permite hacer saltos de linea
+        let ul2 = `
+        <ul>
+            <li>Primavera</li>
+            <li>Verano</li>
+            <li>Otoño</li>
+            <li>Invierno</li>
+        </ul>`
+
+        console.log(ul2);
+
+        let ul3 ="<ul>";
+            ul3+="<li>Primavera</li>";
+            ul3+="<li>Verano</li>";
+            ul3+="<li>Otoño</li>";
+            ul3+="<li>Invierno</li>";
+            ul3+="</ul>";
+        console.log(ul3)
     </script>
 </body>
 </html>
