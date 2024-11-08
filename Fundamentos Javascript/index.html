@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundamentos JavaScript</title>
+</head>
+<body>
+    <h1>Fundamentos JavaScript</h1>
+
+    <script>
+        var hola = "Hola mundo"; // (var:tiene un alcance global) NO RECOMENDABLE USAR
+        let hello = "Hello Word"; //Ambito de bloque (solo existe en el documento, dentro del bloque en la que se definio)
+        console.log(hola);
+        console.log(hello);
+        console.log(window);
+        console.log(window.hola);
+        console.log(window.hello);
+
+        //Esto es un bloque - comentario de una linea
+        /*
+        Esto
+        es un
+        comentario de
+        varias lineas
+        */
+
+        // SITUACION CON VAR
+        console.log("***********  VAR  ***********")
+        var musica = "Rock";
+        console.log("Variable Musica antes del bloque", musica);
+        {
+            var musica = "Pop"
+            console.log("Variable Musica dentro del bloque", musica)
+        }
+        console.log("Variable Musica despues del bloque", musica)
+
+        // SITUACION CON LET
+        console.log("***********  LET  ***********")
+        let musica2 = "Rock";
+        console.log("Variable Musica antes del bloque", musica2);
+        {
+            let musica2 = "Pop"
+            console.log("Variable Musica dentro del bloque", musica2);
+        }
+        console.log("Variable Musica despues del bloque", musica2);
+
+    </script>
+</body>
+</html>
