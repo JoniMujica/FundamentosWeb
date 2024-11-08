@@ -7,7 +7,6 @@
 </head>
 <body>
     <h1>Fundamentos JavaScript</h1>
-
     <script>
         /*var hola = "Hola mundo"; // (var:tiene un alcance global) NO RECOMENDABLE USAR
         let hello = "Hello Word"; //Ambito de bloque (solo existe en el documento, dentro del bloque en la que se definio)
@@ -45,7 +44,7 @@
         }
         console.log("Variable Musica despues del bloque", musica2);*/
 
-        let a;
+        /*let a;
         const PI = 3.1416;
         //const NUEVE;
         console.log(PI);
@@ -65,8 +64,28 @@
         objeto.correo = "jonmircha@hotmail.com"
         colores.push("anaranjado");
         console.log(objeto);
-        console.log(colores);
+        console.log(colores);*/
+        
 
+        //CADENAS DE TEXTO AKA STRING
+        let nombre = "Jon";
+        let apellido = "Mircha";
+        let saludo = new String("Hola Mundo");
+        let loren =  "       Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem eius unde corporis tempore voluptates odit et suscipit eum impedit deserunt ratione, error iusto doloremque recusandae aliquam nam similique quis architecto?         "
+
+            console.log(nombre.length,
+            apellido.length,
+            saludo.length,
+            nombre.toUpperCase(),
+            apellido.toLowerCase(),
+            loren.includes("amet"), //el string contiene dicha letra (del parametro)
+            loren.includes("jon"),
+            loren,
+            loren.trim(), //quita los espacios en blanco
+            loren.split(" " ), //Separa en un array, las palabras por espacios que tenga
+            loren.split(","),  //Separa en un array, las palabras por coma que tenga
+        );
+        
     </script>
 </body>
 </html>
