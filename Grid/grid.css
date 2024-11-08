@@ -187,3 +187,20 @@ html {
   grid-auto-flow: column;
   grid-auto-columns: 50px;
 }
+
+/*Flujo de la grid Dense (Grid Flow Dense)*/
+.grid-flow-dense{
+  display: grid;
+  /*Grid de 5cx4r*/
+  grid-template-columns: repeat(5,1fr);
+  grid-template-rows: repeat(4,200px);
+  grid-auto-flow: row dense;
+}
+
+.grid-flow-dense .item:nth-child(9){
+  color:cyan;
+  grid-row: span 3;
+  grid-column: span 3;
+}
+
+
