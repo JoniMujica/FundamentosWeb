@@ -154,7 +154,7 @@
         */
         
         
-        
+        /*
         //BOOLEANS
         let verdadero = true;
         let falso = false;
@@ -180,10 +180,60 @@
 
         //NaN - Not a Number
         let noEsNumero = "Hola" * 3.7;
-        console.log(noEsNumero);
+        console.log(noEsNumero);*/
         
         
         
+        
+
+
+        /*Una funcion es un bloque de codigo autocontenido, que se puede definir una vez y ejecutar en cualquier momento.
+        Opcionalmente, una funcion puede aceptar parametros y devolver un valor*/
+        //FUNCIONES DECLARADAS!!!!!!!!!!!!!!!!
+        function estoEsUnaFuncion(){
+            console.log("1");
+            console.log("2");
+            console.log("3");
+        }
+        
+
+        //Invocacion de funcion
+        //estoEsUnaFuncion();
+        //estoEsUnaFuncion();
+        //estoEsUnaFuncion(); 
+
+        function unaFuncionQueDevuelveValor(){
+            console.log("1");
+            return 19;
+            console.log("2");
+            console.log("3");
+            return "La funcion ha retornado una cadena de texto";
+        }
+
+        //let valorDeFuncion = unaFuncionQueDevuelveValor(); 
+        //console.log(valorDeFuncion);
+
+        function saludar(nombre = "Desconocido",edad = 0){
+            console.log(`Hola, mi nombre es ${nombre} y tengo ${edad} años`)
+        }
+
+        saludar("kEbAi",17);
+        saludar();
+        
+
+        //Funciones declarada VS Funciones expresadas
+        funcionDeclarada();
+        function funcionDeclarada(){
+            console.log("Esto es una funcion declarada, puede invocarse en cualquier parte de nuestro codigo, incluso antes de que la funcion sea declarada");
+        }
+        funcionDeclarada();
+        
+        //funcion anonima
+        //funcionExpresada(); //no se puede invocar una funcion expresada sin antes declararla
+        const funcionExpresada = function(){
+            console.log("Esto es una funcion expresada, es decir, una funcion que se le ha asignado como valor a una variable, si invocamos  esta funcion antes de su definicion, JS nos dira...  'Cannot access 'funcionExpresada' before initialization'")
+        }
+        funcionExpresada();
         
         
 
