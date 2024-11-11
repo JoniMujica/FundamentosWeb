@@ -487,7 +487,7 @@
         }*/
 
         /*------------------------------CICLOS (LOOPS)----------------------------------------*/
-        let contador = 0;
+       /* let contador = 0;
        while (contador < 10) {
            console.log("while" + contador);
            contador++;
@@ -526,11 +526,11 @@
         for (const caracter of cadena) {
             console.log(caracter);
             
-        }
+        }*/
 
 
     /*------------------------------------------------Manejo de errores----------------------------------------*/
-    try {
+    /*try {
         console.log("En el Try se agrega el codigo a evaluar");
         noExiste;
         console.log("Segundo mensaje en el try");
@@ -554,8 +554,25 @@
     } catch (error) {
         console.log(`Se produjo el siguiente error: ${error}`);
         
+    }*/
+
+    /*----------------------------------------BREAK & CONTINUE-------------------------------*/
+    const numeros = [1,2,3,4,5,6,7,8,9,0];
+    for (let i = 0; i < numeros.length; i++) {
+        if (i === 5) {
+            break;
+        }
+        console.log(numeros[i]);
+        
     }
 
+    for (let i = 0; i < numeros.length; i++) {
+        if (i === 5) {
+            continue;
+        }
+        console.log(numeros[i]);
+        
+    }
     </script>
 </body>
 </html>
