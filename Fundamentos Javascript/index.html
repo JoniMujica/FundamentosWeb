@@ -272,6 +272,7 @@
         })*/
 
         /*-----------------------------------OBJETO-------------------------------------*/
+        /*
         let a = new String("Hola");
         //console.log(a);
         const b = {};
@@ -279,7 +280,7 @@
         const c = new Object();
         console.log(c);
 
-        /*Dentro  de un objeto, a las variables se las va a llamar atributos/propiedades. Y a las funciones se les llama metodos*/
+        /*Dentro  de un objeto, a las variables se las va a llamar atributos/propiedades. Y a las funciones se les llama metodos
         const jon = {
             nombre: "Jon",
             apellido: "Mircha",
@@ -319,9 +320,75 @@
         console.log(Object.values(jon));
         console.log(jon.hasOwnProperty("nombre"));
         console.log(jon.hasOwnProperty("nacimiento"));
-        
-        
+        */
 
+        /********************************************OPERADORES ARITMETICOS***********************************/
+        let a = 5+(5-10)*3;
+        let modulo = 5%2;
+        console.log(a);
+        console.log(modulo);
+
+        /*Operadores Relacionales
+        > , < <= , >= , == , === ,!= ,!==*/
+        
+        console.log(8 > 9);
+        console.log(9 > 8);
+        console.log(8 >= 9);
+        console.log(9 >= 8);
+        console.log(7 < 7);
+        console.log(7 <= 7);
+
+        /*
+        = 1 igual es Asignacion de variable
+        == 2 igual es comparacion de valores
+        === 3 igual es comparacion de tipo de datos y de valor
+        */
+
+        console.log(7 == 7);
+        console.log(7 == "7");
+        console.log(0 == false);
+
+        console.log(7 === 7);
+        console.log(7 === "7");
+        console.log(0 === false);
+        
+        
+        /*Incremento Decremento*/
+        let i = 2;
+        console.log(i++);
+        console.log(i);
+        
+       // console.log(++i);
+        
+        
+        //i = i+2;
+        //i*=3;
+
+        //operador unario
+        i++;
+        i--;
+        ++i;
+        --i;
+
+        console.log(i);
+
+        //Operadores Logicos
+        /*
+        !- not : niega, es decir lo que es verdadero, lo vuelve false y viceversa
+        || Or : Cuando tengo 2 o mas condiciones, con que una se cumpla, es decir sea verdadera, el OR validara
+        && And : Cuando tengo 2 o mas condiciones, Todas tienen que cumplirse, es decir sea verdadera, para que AND se valide
+        */
+
+        console.log(!true);
+        console.log(!false);
+        console.log((9 === 9) || ("9" === 9));
+        console.log((9 === 9) && ("9" === 9));
+        console.log((9 === 9) && ("9" === "9"));
+        
+        
+        
+        
+        
         
         
         
