@@ -390,7 +390,7 @@
         /*-----------------------------CONDICIONALES-----------------------------------*/
         /*IF-ELSE*/
 
-        let edad = 17;
+        /*let edad = 17;
         if (edad > 17) {
             console.log("Eres mayor de edad");
             
@@ -444,7 +444,7 @@
             console.log("Buenas noches");
         }
 
-        /*Operador Ternario (Condicion) ? verdadero : falsa */
+        /*Operador Ternario (Condicion) ? verdadero : falsa
         console.log("Operador Ternario");
         let eresMayor = (edad >= 18) ? "Eres mayor de edad" : "Eres menor de edad";
         console.log(eresMayor);
@@ -484,6 +484,48 @@
             default:
                 console.log("El dia no existe");
                 break;
+        }*/
+
+        /*------------------------------CICLOS (LOOPS)----------------------------------------*/
+        let contador = 0;
+       while (contador < 10) {
+           console.log("while" + contador);
+           contador++;
+       }
+
+       do {
+            console.log("do while" + contador);
+            contador++;
+       } while (contador < 10);
+
+       for (let i = 0; i < 10; i++) {
+        console.log("for" + i);
+       }
+        let numeros = [10,20,30,40,50,60,70,80,90];
+        for (let i = 0; i < numeros.length; i++) {
+            console.log(numeros[i]);
+        }
+
+
+        //for in
+        const jon ={
+            nombre: "Jon",
+            apellido: "Mircha",
+            edad: 35
+        }
+
+        //Es mas para objetos JS
+        for (const propiedad in jon) {
+            console.log(`Key: ${propiedad}, Value: ${jon[propiedad]}`); //en los loops, para acceder al valor de un objetos, lo identificamos con [] (como en los arrays)
+        }
+        //Es mas para arreglos o cualquier objeto iterable
+        for (const elemento of numeros) {
+            console.log(elemento);
+        }
+        let cadena = "Hola Mundo";
+        for (const caracter of cadena) {
+            console.log(caracter);
+            
         }
 
 
