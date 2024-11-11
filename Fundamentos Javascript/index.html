@@ -323,13 +323,13 @@
         */
 
         /********************************************OPERADORES ARITMETICOS***********************************/
-        let a = 5+(5-10)*3;
+        /*let a = 5+(5-10)*3;
         let modulo = 5%2;
         console.log(a);
         console.log(modulo);
 
         /*Operadores Relacionales
-        > , < <= , >= , == , === ,!= ,!==*/
+        > , < <= , >= , == , === ,!= ,!==
         
         console.log(8 > 9);
         console.log(9 > 8);
@@ -342,7 +342,7 @@
         = 1 igual es Asignacion de variable
         == 2 igual es comparacion de valores
         === 3 igual es comparacion de tipo de datos y de valor
-        */
+        
 
         console.log(7 == 7);
         console.log(7 == "7");
@@ -353,7 +353,7 @@
         console.log(0 === false);
         
         
-        /*Incremento Decremento*/
+        //Incremento Decremento
         let i = 2;
         console.log(i++);
         console.log(i);
@@ -377,24 +377,116 @@
         !- not : niega, es decir lo que es verdadero, lo vuelve false y viceversa
         || Or : Cuando tengo 2 o mas condiciones, con que una se cumpla, es decir sea verdadera, el OR validara
         && And : Cuando tengo 2 o mas condiciones, Todas tienen que cumplirse, es decir sea verdadera, para que AND se valide
-        */
+        
 
         console.log(!true);
         console.log(!false);
         console.log((9 === 9) || ("9" === 9));
         console.log((9 === 9) && ("9" === 9));
-        console.log((9 === 9) && ("9" === "9"));
+        console.log((9 === 9) && ("9" === "9"));*/
         
         
         
-        
-        
-        
-        
-        
+        /*-----------------------------CONDICIONALES-----------------------------------*/
+        /*IF-ELSE*/
 
+        let edad = 17;
+        if (edad > 17) {
+            console.log("Eres mayor de edad");
+            
+        } else {
+            console.log("Eres menor de edad");
+        }
         
+        if (edad >= 18) {
+            console.log("Eres mayor de edad");
+            
+        } else {
+            console.log("Eres menor de edad");
+        }
+
+        if (edad < 18) {
+            console.log("Eres menor de edad");
+        } else {
+            console.log("Eres mayor de edad");
+        }
+
+        if (edad <= 17) {
+            console.log("Eres menor de edad");
+        } else {
+            console.log("Eres mayor de edad");
+        }
+
+        //----------------------------------- IF-ELSE IF-ELSE
+        //Dejame dormir 0hrs - 5hrs
+        //Buenos dias 6hrs - 1hrs
+        //Buenas tardes 12hrs - 18hrs
+        //Buenas 19hrs - 23hrs
+
+        let hora = 6;
+        if (hora>= 0 && hora <=5) {
+            console.log("Dejame Dormir");
+        }else if(hora>= 6 && hora <=11){
+            console.log("Buenos dias");
+        }else if (hora >= 12 && hora <= 18) {
+            console.log("Buenas tardes");
+        }else{
+            console.log("Buenas noches");
+        }
+
+        if (hora <6) {
+            console.log("Dejame Dormir");
+        }else if(hora> 5 && hora <12){
+            console.log("Buenos dias");
+        }else if (hora > 11 && hora < 19) {
+            console.log("Buenas tardes");
+        }else{
+            console.log("Buenas noches");
+        }
+
+        /*Operador Ternario (Condicion) ? verdadero : falsa */
+        console.log("Operador Ternario");
+        let eresMayor = (edad >= 18) ? "Eres mayor de edad" : "Eres menor de edad";
+        console.log(eresMayor);
         
+        //--- switch - case 
+        //Lunes 1
+        //Martes 2
+        //Miercoles 3
+        //Jueves 4
+        //Viernes 5
+        //Sabado 6
+        //Domingo 7
+        let dia = 2;
+        switch (dia) {
+            case 0:
+                console.log("Domingo");
+                break;
+            case 1:
+                console.log("Lunes");
+                break;
+            case 2:
+                console.log("Martes");
+                break;
+            case 3:
+                console.log("Miercoles");
+                break;
+            case 4:
+                console.log("Jueves");
+                break;
+            case 5:
+                console.log("Viernes");
+                break;
+            case 6:
+                console.log("Sabado");
+                break;
+                
+            default:
+                console.log("El dia no existe");
+                break;
+        }
+
+
     </script>
 </body>
 </html>
