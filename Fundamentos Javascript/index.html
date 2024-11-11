@@ -575,7 +575,7 @@
     }*/
 
         /*---------------------------DESTRUCTURACION----------------------------*/
-        //let {nombre,edad,apellido} = props;
+       /* //let {nombre,edad,apellido} = props;
         const numeros = [1,2,3];
         //sin destructuracion
         let uno = numeros[0],
@@ -595,7 +595,34 @@
         }
 
         const {nombre,apellido,edad} = persona;
-        console.log(nombre,apellido,edad);
+        console.log(nombre,apellido,edad);*/
+
+        /*---------------------------------OBJETOS LITERALES-----------------------------*/
+        let nombre = "Kenai",
+            edad = 7;
+
+        const perro = {
+            nombre:nombre,
+            edad:edad,
+            ladrar: function(){
+                console.log("guauu guauu!!!!");
+            }
+        }
+        console.log(perro);
+        perro.ladrar();
+
+        //Aca simplificamos la variable reutilizada , se asigna como KEY al nombre de la variable, y como VALUE al valor que contenga la variable
+        const dog ={
+            nombre,
+            edad,
+            raza:"Callejera",
+            ladrar(){
+                console.log("guauu guauu guauuu!!!!");
+            }
+        }
+
+        console.log(dog);
+        
         
 
 
