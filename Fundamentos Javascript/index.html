@@ -728,7 +728,7 @@
         //    }
         //}
 
-
+        /*
         //Funcion constructora donde asignamos los metodos a los prototipos, no como a la funcion como tal
         function Animal(nombre,genero) {
             //atributos
@@ -744,15 +744,41 @@
         Animal.prototype.saludar = function() {
             console.log(`Hola me llamo ${this.nombre}`);
         }
-        const snoopy = new Animal("Snoopy","Macho"), lolabunny = new Animal("Lola Bunny","Hembra");
+
+        //Herencia prototipica
+        function Perro(nombre,genero,tamanio){
+            this.super = Animal; //aca le digo que el elemento padre va a ser Animal
+            this.super(nombre,genero); //asocio los datos como herencia prototipica
+            this.tamanio = tamanio;
+        }
+
+        //Perro esta heredando de Animal
+        Perro.prototype = new Animal();
+        Perro.prototype.constructor = Perro;
+
+        //Sobreescritura de metodos del Prototipo padre en el hijo
+        Perro.prototype.sonar = function(){
+            console.log("Soy un perro, y mi sonido es un ladrido");
+        }
+        Perro.prototype.ladrar = function () {
+            console.log("GUAU GUAU!!");
+        }
+
+        //const snoopy = new Animal("Snoopy","Macho"),
+        //lolabunny = new Animal("Lola Bunny","Hembra");
+        const snoopy = new Perro("Snoopy","Macho","Mediano"),
+        lolabunny = new Animal("Lola Bunny","Hembra");
+
+
         console.log(snoopy);
         console.log(lolabunny);
 
         snoopy.sonar();
-        snoopy.saludar();
+        snoopy.saludar(); //la funcion saludar, aunque no este en el prototipo principal (hijo), se puede usar directamente ya que lo hereda del padre
+        snoopy.ladrar();
 
         lolabunny.sonar();
-        lolabunny.saludar();
+        lolabunny.saludar()*/
 
         
         
