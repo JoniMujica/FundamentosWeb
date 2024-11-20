@@ -854,6 +854,10 @@
         scooby.setRaza = "Gran Danes"; 
         console.log(scooby.getRaza);*/
         
+
+
+        //---------------------Objeto Console------------------//
+        /*
         console.log(console);
         console.error("Esto es un error");
         console.warn("Esto es un warning");
@@ -930,7 +934,51 @@
         //hacer pruebas
         let x = 3, y = 2, pruebaXY = "Se espera que X siempre sea menor que Y";
 
-        console.assert(x<y,{x,y,pruebaXY})
+        console.assert(x<y,{x,y,pruebaXY})*/
+
+
+        //-----------------------Objeto Date-----------------//
+        console.clear();
+        console.log(Date);
+        console.log(Date());
+
+        let fecha = new Date();
+        console.log(fecha);
+        console.log(fecha.getDate()); //numero de dia del mes
+        console.log(fecha.getDay()); //numero de dia de la semana D L M Mi J V S -> 0 1 2 3 4 5 6
+        console.log(fecha.getMonth()); // mes Ene Feb Mar Abr May Jun Jul Ago Sep Oct Nov Dic -> 0 1 2 3 4 5 6 7 8 9 10 11
+        console.log(fecha.getYear()); //numero de cuantos años pasaron desde 1900 hasta la actualidad
+        console.log(fecha.getFullYear());
+        
+        console.log(fecha.getHours());
+        console.log(fecha.getMinutes());
+        console.log(fecha.getSeconds());
+        console.log(fecha.getMilliseconds());
+        console.log(fecha.toString()); //Wed Nov 20 2024 14:38:20 GMT-0300 (hora estándar de Argentina)
+        console.log(fecha.toDateString()); //Wed Nov 20 2024
+        console.log(fecha.toLocaleString()); //20/11/2024, 14:38:20
+        console.log(fecha.toLocaleDateString()); //20/11/2024
+        console.log(fecha.toLocaleTimeString()); //14:40:33
+
+        console.log(fecha.getTimezoneOffset());
+
+        console.log(fecha.getUTCDate());
+        console.log(fecha.getUTCHours());
+        console.log(Date.now());
+
+
+        let cumpleJon = new Date(1984,4,23); //año,mes,dia
+        console.log(cumpleJon);
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
 
 
