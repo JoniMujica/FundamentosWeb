@@ -784,7 +784,8 @@
         /*--------------------Clases y Herencia------------------*/
         
         //Funcion constructora donde asignamos los metodos a los prototipos, no como a la funcion como tal
-        class Animal{
+        
+        /*class Animal{
             constructor(nombre,genero){
                 //El constructor es un metodo especial que se ejecuta en el momento de instanciar la clase
                 this.nombre = nombre;
@@ -851,7 +852,97 @@
         scooby.ladrar();
         console.log(scooby.getRaza);
         scooby.setRaza = "Gran Danes"; 
-        console.log(scooby.getRaza);
+        console.log(scooby.getRaza);*/
+        
+        console.log(console);
+        console.error("Esto es un error");
+        console.warn("Esto es un warning");
+        console.info("Esto es un mensaje informativo");
+        console.log("Un registro de lo que ha pasado en nuestra aplicacion");
+        
+        let nombre = "Jon",
+        apellido = "Mircha",
+        edad = 35;
+        console.log(nombre);
+        console.log(apellido);
+        console.log(edad);
+        console.log(nombre,apellido,edad);
+        console.log(`Hola mi nombre es ${nombre} ${apellido} y tengo ${edad} años`);
+        console.log(`Hola mi nombre es %s %s y tengo %d años`, nombre,apellido,edad);
+        console.clear();
+        console.log(window);
+        console.log(document);
+        console.dir(window);
+        console.dir(document);
+        console.clear();
+        console.group("Cursos de @jonmircha en youtube");
+        console.log("Curso de JS");
+        console.log("Curso de NoseJS");
+        console.log("Curso de Progressive web apps");
+        console.log("Curso de FlexBox");
+        console.log("Curso de Diseño y programacion web");
+        console.groupEnd();
+
+        console.groupCollapsed("Cursos de @jonmircha en youtube");
+        console.log("Curso de JS");
+        console.log("Curso de NoseJS");
+        console.log("Curso de Progressive web apps");
+        console.log("Curso de FlexBox");
+        console.log("Curso de Diseño y programacion web");
+        console.groupEnd();
+        console.clear();
+
+        console.log(console);
+        console.table(Object.entries(console).sort());
+
+        const numeros = [1,2,3,4,5], vocales = ["a","e","i","o","u"];
+        console.table(numeros);
+        console.table(vocales);
+
+        const perro = {
+            nombre: "boni",
+            raza: "Boxer",
+            color: "Caffe"
+        }
+
+        console.table(perro)
+        console.clear();
+
+        console.time("Cuanto tiempo tarde mi codigo");
+        const arreglo = Array(1000000);
+        
+        for (let i = 0; i < arreglo.length; i++) {
+            arreglo[i] = i;
+        }
+        
+        console.timeEnd("Cuanto tiempo tarde mi codigo");
+        //console.log(arreglo);
+        console.clear();
+
+
+        for (let i = 0; i <= 100; i++) {
+            console.count("condigo for")
+            console.log(i);
+        }
+
+        console.clear();
+
+        //hacer pruebas
+        let x = 3, y = 2, pruebaXY = "Se espera que X siempre sea menor que Y";
+
+        console.assert(x<y,{x,y,pruebaXY})
+        
+
+
+        
+
+        
+        
+        
+        
+        
+        
+        
         
         
 
