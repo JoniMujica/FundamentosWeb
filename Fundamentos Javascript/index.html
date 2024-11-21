@@ -989,7 +989,7 @@
         //CORTO CIRCUITO OR - cuando el valor de la izquierda en la expresion siempre pueda validar a true, es el valor que se cargara por defecto
         //
         //CORTO CIRCUITO AND - cuando el valor de la izquierda en la expresion siempre pueda validar a false, es el valor que se cargara por defecto
-  
+        /*
         function saludar(nombre){
             nombre = nombre || "desconocido";
             console.log(`Hola ${nombre}`);
@@ -1025,9 +1025,25 @@
         console.log(true && "valor de la derecha");
         console.log([] && "valor de la derecha");
         console.log({} && "valor de la derecha");
+        */
+        //---------------alert,confirm,prompt-------------//
+
+        console.log(window);
+        //window.alert("Esto es una alerta")
+        //window.confirm("Esto es una alerta")
+        //window.prompt("Esto es un prompt, y le permite al usuario ingresar un valor")
         
+        //alert("Esto es una alerta");
+        //confirm("Esto es una alerta");
+        //prompt("Esto es un prompt, y le permite al usuario ingresar un valor");
         
-        
+        let alerta = alert("Esto es una alerta"), 
+        confirmacion = confirm("Esto es una alerta"), 
+        aviso = prompt("Esto es un prompt, y le permite al usuario ingresar un valor");
+
+        console.log(alerta);
+        console.log(confirmacion);
+        console.log(aviso);
         
         
         
