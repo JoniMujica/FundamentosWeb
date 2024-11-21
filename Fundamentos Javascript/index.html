@@ -1028,7 +1028,7 @@
         */
         //---------------alert,confirm,prompt-------------//
 
-        console.log(window);
+        //console.log(window);
         //window.alert("Esto es una alerta")
         //window.confirm("Esto es una alerta")
         //window.prompt("Esto es un prompt, y le permite al usuario ingresar un valor")
@@ -1037,15 +1037,34 @@
         //confirm("Esto es una alerta");
         //prompt("Esto es un prompt, y le permite al usuario ingresar un valor");
         
-        let alerta = alert("Esto es una alerta"), 
+        /*let alerta = alert("Esto es una alerta"), 
         confirmacion = confirm("Esto es una alerta"), 
         aviso = prompt("Esto es un prompt, y le permite al usuario ingresar un valor");
 
         console.log(alerta);
         console.log(confirmacion);
-        console.log(aviso);
+        console.log(aviso);*/
+
+
+        //---------------------Expresiones regulares----------------------//
+        /*
+        Expresiones Regulares
+        Son una secuencia de caracteres que forma un patrón de búsqueda, principalmente utilizada para la búsqueda de patrones de cadenas de caracteres.
+
+        https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular
+        https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions
+        */
         
+        let cadena = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta vel repellat at libero dignissimos veniam rerum inventore pe23rspiciatis ea, provident, quo sit aspernatur dolor? Distinctio recusandae eius voluptates similique velit? 65"
+        //let expReg = new RegExp("lorem","ig");
+        //console.log(expReg.test(cadena));
+        //console.log(expReg.exec(cadena));
         
+        //let expReg2 = /[0-9]/ig;
+        let expReg2 = /lorem{1,}/ig; //almenos una vez
+        console.log(expReg2.test(cadena));
+        console.log(expReg2.exec(cadena));
+
         
         
 
