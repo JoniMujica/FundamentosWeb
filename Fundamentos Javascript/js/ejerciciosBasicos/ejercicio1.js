@@ -342,10 +342,15 @@ const eliminarRepetidos = (arr) => {
         console.error("El parametro ingresado no es un array");
         return;
     }
-    return{
+    /*return{
         original: arr,
         sinDuplicados: arr.filter((value,index,self)=> self.indexOf(value) === index)
-    }
+    }*/
+
+        return {
+            original: arr,
+            sinDuplicados: [...new Set(arr)]
+        }
 }
 
 console.log(eliminarRepetidos(["x", 10, "x", 2, "10", 10, true, true]));
