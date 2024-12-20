@@ -48,7 +48,7 @@
     
 
     //------------SETS--------------------
-    const set = new Set([1,2,3,3,4,5,true,false,false,{},{},"hola","HOLA"]);
+    /*const set = new Set([1,2,3,3,4,5,true,false,false,{},{},"hola","HOLA"]);
     console.log(set);
     console.log(set.size);
     
@@ -88,7 +88,50 @@
     console.log(set.has(19));
 
     set2.clear();
-    console.log(set2);
+    console.log(set2);*/
+
+
+    //-----------------Map--------------
+    const mapa = new Map();
+    mapa.set("nombre","jon");
+    mapa.set("apellido","mircha");
+    mapa.set("edad",35);
+    
+    console.log(mapa);
+    console.log(mapa.size);
+    console.log(mapa.has("correo"));
+    console.log(mapa.has("nombre"));
+    console.log(mapa.get("nombre"));
+    mapa.set("nombre","jonathan mircha"); //reescribe el valor de la propiedad
+    console.log(mapa.get("nombre"));
+
+    mapa.delete("apellido");
+
+    mapa.set(19,"diecinueve");
+    mapa.set(false,"falso");
+    mapa.set({},{});
+
+    console.log(mapa);
+
+    for (const [key,value] of mapa) {
+        console.log(`llave: ${key}, valor ${value}`);
+    }
+    
+    const mapa2 = new Map([
+        ["nombre","Kenai"],
+        ["edad",7],
+        ["Animal","Perro"],
+        [null,"nulo"]
+    ])
+
+    console.log(mapa2);
+
+    const llavesMapa2 = [...mapa2.keys()];
+    const valoresMapa2 = [...mapa2.values()];
+
+    console.log(llavesMapa2);
+    console.log(valoresMapa2);
+    
     
     
     
