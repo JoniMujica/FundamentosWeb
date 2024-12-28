@@ -7,6 +7,9 @@
 </head>
 <body>
     <h1>Nuevos Tipos de datos</h1>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eum dolorum tempora labore praesentium velit ducimus, dolor doloribus quaerat, voluptas facilis aut, dicta laboriosam ut necessitatibus impedit eos iure assumenda.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eum dolorum tempora labore praesentium velit ducimus, dolor doloribus quaerat, voluptas facilis aut, dicta laboriosam ut necessitatibus impedit eos iure assumenda.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eum dolorum tempora labore praesentium velit ducimus, dolor doloribus quaerat, voluptas facilis aut, dicta laboriosam ut necessitatibus impedit eos iure assumenda.</p>
 </body>
 <script>
     /*
@@ -92,7 +95,7 @@
 
 
     //-----------------Map--------------
-    const mapa = new Map();
+    /*const mapa = new Map();
     mapa.set("nombre","jon");
     mapa.set("apellido","mircha");
     mapa.set("edad",35);
@@ -131,7 +134,115 @@
 
     console.log(llavesMapa2);
     console.log(valoresMapa2);
+    */
+   
+    //--------------WeakSet-------------------
+    //los WeakSet no se puede iterar
+
+    //const ws = new WeakSet([1,2,3,3,4,5,true,false,false,{},{},"hola","HOla"]) con weakset no podemos almacenar valores al inicializarlo, debemos usar el metodo Add() para agrgar 1x1
+    /*const ws = new WeakSet();
+    //ws.add(1); el parametro debe ser un objeto
+    let valor1 = {"valor":1};
+    let valor2 = {"valor":2};
+    let valor3 = {"valor":3};    
+
+    ws.add(valor1);
+    ws.add(valor2);
+    console.log(ws);
+
+    console.log(ws.has(valor1));
+    console.log(ws.has(valor3));
+
+    ws.delete(valor2);
+    console.log(ws);
+
+    ws.add(valor2);
+    ws.add(valor3);
+    console.log(ws);
+
+    setInterval(() => {
+        console.log(ws);
+    }, 1000);
+
+    setTimeout(() => {
+        valor1 = null;
+        valor2 = null;
+        valor3 = null;
+    }, 5000);*/
+
+    //---------weakMap----------------
+    //const wm = new WeakMap([
+    //    ["nombre","Kenai"],
+    //    ["edad",7],
+    //    ["Animal","Perro"],
+    //    [null,"nulo"]]);  con weakmap no podemos almacenar valores al inicializarlo, debemos usar el metodo set() para agrgar 1x1
+
+    /*const wm = new WeakMap();
+
+    let llave1 = {};
+    let llave2 = {};
+    let llave3 = {};
+    wm.set(llave1,1)
+    wm.set(llave2,2)
+    console.log(wm);
     
+    console.log(wm.has(llave1));
+    console.log(wm.has(llave3));
+    
+    console.log(wm.get(llave1));
+    console.log(wm.get(llave2));
+    console.log(wm.get(llave3));
+    
+
+    wm.delete(llave2);
+    console.log(wm);
+
+    wm.set(llave2,2);
+    wm.set(llave3,3);
+    console.log(wm);
+    
+
+    setInterval(() => {
+        console.log(wm);
+        
+    }, 1000);
+
+
+    setTimeout(() => {
+        llave1 = null;
+        llave2 = null;
+        llave3 = null;
+    }, 5000);
+
+    */
+
+    //------------------------ Iterables & Iterators-----------------------------
+    //const iterable = new Set([1,2,3,3,4,5,6,6]);
+    //const iterable = [1,2,3,4,5];
+    //const iterable = 'Hola Mundo';
+    //const iterable = new Map([["nombre","jon"],["edad",35]]);
+    //accedemos al iterador del iterable
+    const iterador = iterable[Symbol.iterator]();
+    console.log(iterable);
+    console.log(iterador);
+    //console.log(iterador.next());
+    //console.log(iterador.next());
+    //console.log(iterador.next());
+    //console.log(iterador.next());
+    //console.log(iterador.next());
+    
+    let next = iterador.next();
+    while (!next.done) {
+        console.log(next.value);
+        next = iterador.next();
+    }
+    
+    
+    
+    
+
+
+
     
     
     
