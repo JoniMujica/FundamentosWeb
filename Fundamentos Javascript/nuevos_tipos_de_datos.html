@@ -289,6 +289,7 @@
     */
 
     //--------------------Proxies----------------
+    /*
     const persona = {
         nombre:"",
         apellido:"",
@@ -319,9 +320,20 @@
     jon.twiter = "@jonmircha";
     console.log(jon);
     console.log(persona);
-    
-    
+    */
 
+    //-----------------Propiedad dinamicas de los objetos -------------
+
+    const objUsuarios = {
+        [`id_${Math.round(Math.random()*100 + 5)}`]:"Valor aleatorio"
+    }
+    console.log(objUsuarios);
+
+    const usuarios = ["Jon","Irma","Miguel","Kala","Kenai"];
+    usuarios.forEach((usuario,idx) => objUsuarios[`id_${idx}`] = usuario)
+    
+    console.log(objUsuarios);
+    
 
 
     
