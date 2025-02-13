@@ -323,7 +323,7 @@
     */
 
     //-----------------Propiedad dinamicas de los objetos -------------
-
+    /*
     const objUsuarios = {
         [`id_${Math.round(Math.random()*100 + 5)}`]:"Valor aleatorio"
     }
@@ -333,14 +333,111 @@
     usuarios.forEach((usuario,idx) => objUsuarios[`id_${idx}`] = usuario)
     
     console.log(objUsuarios);
+    */
     
+    //-------------------------THIS---------------
+    /*
+    console.log(this);
+    console.log(window);
+    console.log(this === window);
+    
+    this.nombre = "contexto global";
+    console.log(this.nombre);
+    
+    function imprimir(){
+        console.log(this.nombre)        
+    }
+
+    imprimir();
+
+    {
+        //bloque
+    }
+
+    const obj = {
+        nombre:"contexto objeto",
+        imprimir: function(){
+            console.log(this.nombre);
+        }
+    }
+    
+    obj.imprimir()
+
+    const obj2 = {
+        nombre:"contexto objto 2",
+        imprimir
+    }
+
+    obj2.imprimir();
+
+    const obj3 = {
+        nombre:"contexto objto 3",
+        imprimir: () => {
+            console.log(this.nombre);
+        }
+    }
+
+    obj3.imprimir();
 
 
+    function Persona(nombre){
+        const that = this;
+        that.nombre = nombre;
+        //return console.log(this.nombre);
+
+        //return function(){
+        //    console.log(this.nombre);
+        //}
+
+        //return ()=> console.log(this.nombre);
+
+        return function(){
+            console.log(that.nombre,33);
+        }
+    }
+
+    let jon = new Persona("Jon");
+    jon();
     
+    */
+
+    //---------------------call apply bind------------------------
+    console.log(this);
+    this.lugar = "contexto global";
+    function saludar(saludo,aQuien){
+        console.log(`${saludo} ${aQuien} desde el ${this.lugar}`);
+    }
+    saludar("Hola","Kenai");
     
+    const obj = {
+        lugar: "contexto objeto",
+    }
     
 
+    saludar.call(obj,"Hola","Jon");
+    saludar.call(null,"Hola","Jon");
+    saludar.call(this,"Hola","Jon");
+    saludar.apply(obj,["Adios","Mircha"]);
+    saludar.apply(null,["Adios","Mircha"]);
+    saludar.apply(this,["Adios","Mircha"]);
 
+    this.nombre = "windows"
+
+    const persona = {
+        nombre:"Jon",
+        saludar: function(){
+            console.log(`Hola ${this.nombre}`);
+        }
+    }
+
+    persona.saludar();
+
+    const otraPersona={
+        //a secas esto da undefined, hay que enlazar un contexto
+        saludar: persona.saludar.bind(this), //enlaza el contexto de persona
+    }
+
+    otraPersona.saludar();
     
     
     
