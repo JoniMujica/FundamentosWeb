@@ -1,4 +1,5 @@
 //--------------------------------------------------------------------- */
+/*
 console.log("***************Elementos del documento****************");
 console.log(window.document);
 console.log(document);
@@ -19,5 +20,17 @@ setTimeout(() => {
 
 document.write("<h2>Hola Mundoooooo desde el DOM</h2>")
 
+*/
 
-
+console.log(document.getElementsByTagName("li")); //Deprecated
+console.log(document.getElementsByClassName("card")); //Deprecated
+console.log(document.getElementsByName("nombre")); //Deprecated
+console.log(document.getElementById("menu"));
+console.log(document.querySelector("#menu"));
+console.log(document.querySelectorAll("a"));
+console.log(document.querySelectorAll("a").length);
+document.querySelectorAll("a").forEach(e => console.log(e));
+console.log(document.querySelector(".card"));
+console.log(document.querySelectorAll(".card"));
+console.log(document.querySelectorAll(".card")[2]); //accedo a la 3 tarjeta del nodeList
+console.log(document.querySelectorAll("#menu li"));
