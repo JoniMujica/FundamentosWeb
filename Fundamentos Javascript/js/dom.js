@@ -152,7 +152,7 @@ $card.classList.toggle("opacity-80","sepia");
 */
 
 //----------------------Texto y HTML------------------
-const $whatIsDOM = document.getElementById("que-es");
+/*const $whatIsDOM = document.getElementById("que-es");
 
 let text = `
     <p>
@@ -171,3 +171,25 @@ let text = `
 
 $whatIsDOM.innerHTML = text;
 $whatIsDOM.outerHTML = text;
+*/
+
+//-------------------DOM Traversing----------------------------
+
+const $cards = document.querySelector(".cards");
+console.log($cards);
+console.log($cards.children);
+console.log($cards.children[2]);
+console.log($cards.parentElement);
+console.log($cards.firstChild);//MUESTRA EL PRIMERO NODO(YA SEA TABULACION ETC) 
+console.log($cards.firstElementChild);
+console.log($cards.lastChild);
+console.log($cards.lastElementChild);
+console.log($cards.previousSibling);
+console.log($cards.previousElementSibling);
+console.log($cards.nextSibling);
+console.log($cards.nextElementSibling);
+console.log($cards.closest("div"));
+console.log($cards.closest("body"));
+console.log($cards.children[3].closest("section"));
+
+
