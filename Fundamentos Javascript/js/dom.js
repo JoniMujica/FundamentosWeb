@@ -39,6 +39,7 @@ console.log(document.querySelectorAll("#menu li"));
 */
 
 //--------------------------Atributos y Data-Attributes-----------------------
+/*
 console.log(document.documentElement.lang);
 console.log(document.documentElement.getAttribute("lang"));
 
@@ -78,3 +79,48 @@ console.log($linkDOM.dataset.description);
 console.log($linkDOM.hasAttribute("data-id"));
 $linkDOM.removeAttribute("data-id");
 console.log($linkDOM.hasAttribute("data-id"));
+
+*/
+
+//--------------------ESTILOS Y VARIABLES CSS----------------
+const $linkDOM = document.querySelector(".link-dom");
+console.log($linkDOM.style);
+console.log($linkDOM.getAttribute("style"));
+console.log($linkDOM.style.color);
+
+//styles def
+console.log(window.getComputedStyle($linkDOM));
+
+console.log(window.getComputedStyle($linkDOM).getPropertyValue("color"));//acceso  a una propiedad de style
+
+$linkDOM.style.setProperty("text-decoration","none");
+$linkDOM.style.setProperty("display","block");
+$linkDOM.style.width = "50%";
+$linkDOM.style.textAlign = "center";
+$linkDOM.style.marginLeft = "auto";
+$linkDOM.style.marginRight = "auto";
+$linkDOM.style.padding = "1rem";
+$linkDOM.style.borderRadius = ".5rem";
+console.log($linkDOM.style);
+console.log($linkDOM.getAttribute("style"));
+console.log(window.getComputedStyle($linkDOM));
+
+//Variables CSS - Custom Porperties CSS
+const $html = document.documentElement,
+$body = document.body;
+
+
+let varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color"),
+varYellowColor = getComputedStyle($html).getPropertyValue("--yellow-color")
+//console.log(getComputedStyle($html).getPropertyValue("--dark-color"));
+
+console.log(varDarkColor,varYellowColor);
+
+$body.style.backgroundColor = varDarkColor;
+$body.style.color = varYellowColor;
+
+
+//modificar variables CSS
+$html.style.setProperty("--dark-color","#000");
+varDarkColor = getComputedStyle($html).getPropertyValue("--dark-color");
+$body.style.setProperty("background-color",varDarkColor);
