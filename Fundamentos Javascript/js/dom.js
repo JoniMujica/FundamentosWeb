@@ -174,7 +174,7 @@ $whatIsDOM.outerHTML = text;
 */
 
 //-------------------DOM Traversing----------------------------
-
+/*
 const $cards = document.querySelector(".cards");
 console.log($cards);
 console.log($cards.children);
@@ -191,5 +191,90 @@ console.log($cards.nextElementSibling);
 console.log($cards.closest("div"));
 console.log($cards.closest("body"));
 console.log($cards.children[3].closest("section"));
+*/
+
+//------------Creando Elementos y Fragmentos 
+
+const $figure = document.createElement("figure"),
+$img = document.createElement("img"),
+$figcaption = document.createElement("figcaption"),
+$figcaptionText = document.createTextNode("Animals"),
+$cards = document.querySelector(".cards"),
+$figure2 = document.createElement("figure");
 
 
+//configuro los elementos de la figure
+$img.setAttribute("src","https://picsum.photos/200/200");
+$img.setAttribute("alt","any");
+$figure.classList.add("card");
+
+$figcaption.appendChild($figcaptionText);
+
+$figure.appendChild($img);
+$figure.appendChild($figcaption);
+
+
+//agrego una card
+$cards.appendChild($figure)
+
+
+$figure2.innerHTML = `
+   <img src="https://picsum.photos/200/200" alt="People">
+    <figcaption>People</figcaption>
+`;
+
+$figure2.classList.add("card");
+$cards.appendChild($figure2);
+
+
+
+const estaciones = ["Primavera","Verano","Otonio","Invierno"],
+$ul = document.createElement("ul");
+
+document.write("<h3>Estaciones del anio</h3>");
+document.body.appendChild($ul);
+
+estaciones.forEach(el => {
+  const $li = document.createElement("li");
+  $li.textContent = el
+  $ul.appendChild($li);
+})
+
+
+const continentes = ["Africa","America","Asia","Europa","Oceania"],
+$ul2 = document.createElement("ul");
+document.write("<h3>Continentes del mundo</h3>");
+document.body.appendChild($ul2);
+
+$ul2.innerHTML = "";
+continentes.forEach(el => $ul2.innerHTML += `<li>${el}</li>`);
+
+
+const meses = [
+  "Enero",
+  "Febrero",
+  "Marzo",
+  "Abril",
+  "Mayo",
+  "Junio",
+  "Julio",
+  "Agosto",
+  "Septiembre",
+  "Octubre",
+  "Noviembre",
+  "Diciembre"
+],
+$ul3 = document.createElement("ul"),
+$fragment = document.createDocumentFragment();
+
+
+meses.forEach(el => {
+  const $li = document.createElement("li");
+  $li.textContent = el;
+  $fragment.appendChild($li)
+});
+
+
+document.write("<h3>Meses del anio</h3>");
+$ul3.appendChild($fragment);
+document.body.appendChild($ul3);
