@@ -282,7 +282,7 @@ document.body.appendChild($ul3);
 
 //-----------------Templates HTML=--------------
 
-
+/*
 const $cards = document.querySelector(".cards"),
 $template = document.getElementById("template-card").content,
 $fragment = document.createDocumentFragment(),
@@ -320,4 +320,27 @@ cardContent.forEach(el => {
 })
 
 $cards.appendChild($fragment);
+*/
 
+//-------------: Modificando Elementos (Old Style) -------------------
+const $cards = document.querySelector(".cards"),
+$newCard = document.createElement("figure"),
+$cloneCards = $cards.cloneNode(true);
+
+$newCard.innerHTML = `
+  <img src="https://picsum.photos/200/200" alt="any">
+  <figcaption>Any</figcaption>
+`;
+
+$newCard.classList.add("card");
+
+//reemplazo desde el padre
+//$cards.replaceChild($newCard,$cards.children[2]);
+
+//inserto desde el padre
+//$cards.insertBefore($newCard,$cards.firstChild)
+
+//elimino un elemento
+//$cards.removeChild($cards.lastElementChild);
+
+document.body.appendChild($cloneCards);
