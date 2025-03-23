@@ -323,6 +323,7 @@ $cards.appendChild($fragment);
 */
 
 //-------------: Modificando Elementos (Old Style) -------------------
+/*
 const $cards = document.querySelector(".cards"),
 $newCard = document.createElement("figure"),
 $cloneCards = $cards.cloneNode(true);
@@ -344,3 +345,30 @@ $newCard.classList.add("card");
 //$cards.removeChild($cards.lastElementChild);
 
 document.body.appendChild($cloneCards);
+*/
+
+//---------------------------Modificando Elementos (Cool Style)-------------
+
+const $cards = document.querySelector(".cards"),
+$newCard = document.createElement("figure");
+
+let $contentCard = `
+  <img src="https://picsum.photos/200/200" alt="any">
+  <figcaption></figcaption>
+`;
+
+$newCard.classList.add("card");
+$newCard.insertAdjacentHTML("beforeend",$contentCard)
+$newCard.querySelector("figcaption").insertAdjacentText("afterbegin","Any");
+
+
+//$cards.insertAdjacentElement("beforebegin",$newCard)
+//$cards.insertAdjacentElement("beforeend",$newCard)
+//$cards.insertAdjacentElement("afterend",$newCard);
+//$cards.insertAdjacentElement("afterbegin",$newCard)
+
+
+//$cards.prepend($newCard)
+//$cards.before($newCard)
+//$cards.append($newCard);
+$cards.after($newCard);
