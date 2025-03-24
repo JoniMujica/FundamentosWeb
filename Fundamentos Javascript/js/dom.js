@@ -393,7 +393,13 @@ function holaMundo(){
 }
 
 const $eventoSemantico = document.getElementById("evento-semantico"),
-$eventoMultiple = document.getElementById("evento-multiple");
+$eventoMultiple = document.getElementById("evento-multiple"),
+$eventoRemover = document.getElementById("evento-remover");
+
+function saludar(nombre = "Desconocido"){
+  alert(`Hola ${nombre}`);
+  console.log(event);
+}
 
 //Manejador semantico
 $eventoSemantico.onclick = holaMundo;
@@ -412,3 +418,26 @@ $eventoMultiple.addEventListener("click",(e)=>{
   console.log(e.target);
 });
 
+//-----------------------pasar parametros a una funcion de evento
+$eventoMultiple.addEventListener("click",()=>{
+  saludar();
+  saludar("Jon");
+})
+
+
+//---------------------------Remover eventos multiples
+const removerDobleClick = (e) =>{
+  alert(`Removiendo el evento de tipo ${e.type}`);
+  console.log(e);
+  $eventoRemover.removeEventListener("dblclick",removerDobleClick);
+  $eventoRemover.disabled = true;
+}
+
+$eventoRemover.addEventListener("dblclick",removerDobleClick);
+
+ //esto no funciona
+//$eventoRemover.addEventListener("dblclick",(e)=>{
+//  alert(`Removiendo el evento de tipo ${e.type}`);
+//  console.log(e);
+//  $eventoRemover.removeEventListener("dblclick",re);
+//})
