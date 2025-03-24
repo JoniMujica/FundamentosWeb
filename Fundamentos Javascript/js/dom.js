@@ -349,6 +349,18 @@ document.body.appendChild($cloneCards);
 
 //---------------------------Modificando Elementos (Cool Style)-------------
 
+/*
+.insertAdjacent...
+  .insertAdjacentElement(position, el)
+  .insertAdjacentHTML(position, html)
+  .insertAdjacentText(position, text)
+Posiciones:
+  beforebegin(hermano anterior)
+  afterbegin(primer hijo)
+  beforeend(ultimo hijo)
+  afterend(hermano siguiente)
+
+
 const $cards = document.querySelector(".cards"),
 $newCard = document.createElement("figure");
 
@@ -372,3 +384,31 @@ $newCard.querySelector("figcaption").insertAdjacentText("afterbegin","Any");
 //$cards.before($newCard)
 //$cards.append($newCard);
 $cards.after($newCard);
+*/
+
+//----------------------Manejadores de Eventos---------------------
+function holaMundo(){
+  alert("Hola Mundo");
+  console.log(event);
+}
+
+const $eventoSemantico = document.getElementById("evento-semantico"),
+$eventoMultiple = document.getElementById("evento-multiple");
+
+//Manejador semantico
+$eventoSemantico.onclick = holaMundo;
+$eventoSemantico.onclick = (e) =>{
+  alert("Hola Mundo, Manejador de eventos semanticos");
+  console.log(e);
+  console.log(event);
+}
+
+//eventos multiples
+$eventoMultiple.addEventListener("click",holaMundo);
+$eventoMultiple.addEventListener("click",(e)=>{
+  alert("Hola Mundo Manejador de eventos multiple");
+  console.log(e);
+  console.log(e.type);
+  console.log(e.target);
+});
+
