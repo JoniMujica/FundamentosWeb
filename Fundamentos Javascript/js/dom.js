@@ -513,6 +513,7 @@ function flujoEventos(e){
 */
 
 //--------------BOM: Propiedades y Eventos ----------------
+/*
 window.addEventListener("resize", e => {
   console.clear();
   console.log("*********EVENTO REZISE************");
@@ -547,4 +548,30 @@ document.addEventListener("DOMContentLoaded", e=>{
   console.log(window.screenX);
   console.log(window.screenY);
   console.log(e);
+})
+*/
+
+//---------------- BOM: Métodos ---------------------
+
+//window.alert("Alerta");
+//window.confirm("Confirmacion");
+//window.prompt("Aviso");
+
+const $btnAbrir = document.getElementById("abrir-ventana"),
+$btnCerrar = document.getElementById("cerrar-ventana"),
+$btnImprimir = document.getElementById("imprimir-ventana");
+
+
+let ventana;
+$btnAbrir.addEventListener("click",e=>{
+  ventana = window.open("https://jonmircha.com")
+  console.log(ventana);
+  
+})
+$btnCerrar.addEventListener("click",e=>{
+  //window.close();
+  ventana.close();
+})
+$btnImprimir.addEventListener("click",e=>{
+  window.print();
 })
