@@ -469,6 +469,7 @@ $divsEventos.forEach(div => {
 */
 
 //---------------------stopPropagation & preventDefault ------------------
+/*
 const $divsEventos = document.querySelectorAll(".eventos-flujo div"),
 $linkEventos = document.querySelector(".eventos-flujo a");
 
@@ -487,4 +488,63 @@ $linkEventos.addEventListener("click",e=>{
   alert("Hola soy tu amigo y docente digital, jonathan mircha");
   e.preventDefault();
   e.stopPropagation();
+})
+*/
+
+
+//--------------------------Delegación de Eventos----------------------------
+/*
+document.addEventListener("click",(e)=>{
+  console.log("Click en", e.target);
+
+  if (e.target.matches(".eventos-flujo div")) {
+      flujoEventos(e);
+  }
+
+  if (e.target.matches(".eventos-flujo a")) {
+    alert("Hola soy tu amigo y docente digital, jonathan mircha");
+    e.preventDefault();
+  }
+})
+function flujoEventos(e){
+  console.log(`Hola, te saluda ${this.className}, el click lo origino ${e.target.className}`);
+  //e.stopPropagation();
+}
+*/
+
+//--------------BOM: Propiedades y Eventos ----------------
+window.addEventListener("resize", e => {
+  console.clear();
+  console.log("*********EVENTO REZISE************");
+  console.log(window.innerWidth); //referencia al tamanio del ancho del viewport width
+  console.log(window.innerHeight); //
+  console.log(window.outerWidth); //tamannio de la ventana del navegador
+  console.log(window.outerHeight);
+  //console.log(window.scrollX);
+  //console.log(window.scrollY);
+  
+  console.log(e);
+  
+});
+
+window.addEventListener("scroll",e=>{
+  console.clear();
+  console.log("*********EVENTO SCROLL************");
+  console.log(window.scrollX);
+  console.log(window.scrollY);
+  console.log(e);
+})
+
+window.addEventListener("load",e=>{
+  console.log("*********EVENTO load************");
+  console.log(window.screenX);
+  console.log(window.screenY);
+  console.log(e);
+})
+
+document.addEventListener("DOMContentLoaded", e=>{
+  console.log("*********EVENTO DOMContentLoaded************");
+  console.log(window.screenX);
+  console.log(window.screenY);
+  console.log(e);
 })
