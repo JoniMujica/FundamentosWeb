@@ -16,9 +16,6 @@ html{
 }
 *,*::after,*::before{
     box-sizing: inherit;
-    border: 0;
-    margin: 0;
-    padding: 0;
 }
 body{
     margin: 0;
@@ -63,6 +60,7 @@ img{
     background-color: var(--second-modal-color);
     transition: transform .3s ease, opacity .9s ease;
     opacity: 0;
+    visibility: hidden;
     /* de arriba
     transform: translate(0,-100%);
     /* de abajo
@@ -76,6 +74,7 @@ img{
 .panel.is-active{
     /*transform: translate(0,0);*/
     opacity: 1;
+    visibility: visible;
 }
 
 #btnh{
