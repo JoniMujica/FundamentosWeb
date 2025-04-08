@@ -11,6 +11,7 @@
 
 import hamburger from "./menu-hamburguesa.js";
 import { digitalClock, alarm } from "./reloj.js";
+import { shortcuts } from "./teclado.js";
 const d = document;
 d.addEventListener("DOMContentLoaded",e=>{
     hamburger("#btnh",".panel",".menu a")
@@ -18,4 +19,7 @@ d.addEventListener("DOMContentLoaded",e=>{
     alarm("#activar-alarma","#desactivar-alarma");
 })
 
+d.addEventListener("keydown",e=>{
+    shortcuts(e)
+})
 
