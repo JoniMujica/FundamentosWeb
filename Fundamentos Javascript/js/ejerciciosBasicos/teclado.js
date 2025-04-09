@@ -9,13 +9,10 @@ export function moveBall(e,ball,stage){
     limitsBall = $ball.getBoundingClientRect(),
     limitsStage = $stage.getBoundingClientRect();
 
-    console.log(e.keyCode);
-    console.log(e.key);
-    console.log(limitsBall , limitsStage);
-    
-    
-    const move = (direccion)=>{
-    }
+    //console.log(e.keyCode);
+    //console.log(e.key);
+    //console.log(limitsBall , limitsStage);
+
     
     switch (e.keyCode) {
         //izquierda
