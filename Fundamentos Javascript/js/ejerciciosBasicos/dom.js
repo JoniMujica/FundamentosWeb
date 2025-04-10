@@ -23,11 +23,11 @@ d.addEventListener("DOMContentLoaded",e=>{
     alarm("#activar-alarma","#desactivar-alarma");
     countdown("countdown","April 08,2025, 22:45:00","Feliz Cumpleaños amigo y docente digital");
     scrollTopButtom(".scroll-top-btn");
-    darkTheme(".dark-theme-btn","dark-mode");
 })
 
 d.addEventListener("keydown",e=>{
     shortcuts(e)
     moveBall(e,".ball",".stage");
 })
+darkTheme(".dark-theme-btn","dark-mode");
 
