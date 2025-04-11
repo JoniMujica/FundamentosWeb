@@ -61,6 +61,7 @@ img{
     transition: transform .3s ease, opacity .9s ease;
     opacity: 0;
     visibility: hidden;
+    overflow-y: auto;
     /* de arriba
     transform: translate(0,-100%);
     /* de abajo
