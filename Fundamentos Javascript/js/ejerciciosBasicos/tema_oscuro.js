@@ -5,7 +5,7 @@ export default function darkTheme(btn,classDark){
 
     const $themeBtn = d.querySelector(btn),
     $selectores = d.querySelectorAll("[data-dark]");
-    console.log($selectores);
+    //console.log($selectores);
 
     let moon = "🌙",
     sun = "☀️"
@@ -23,7 +23,7 @@ export default function darkTheme(btn,classDark){
 
     d.addEventListener("click",e=>{
         if (e.target.matches(btn)) {
-            console.log($themeBtn.textContent);
+            //console.log($themeBtn.textContent);
             if ($themeBtn.textContent === moon) {
                 DarkMode();
             }else{

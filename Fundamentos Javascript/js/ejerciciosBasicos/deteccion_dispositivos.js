@@ -38,8 +38,8 @@ export default function userDeviceInfo(id){
             );
         }
     };
-    console.log(ua);
-    console.log(isDesktop.windows());
+    //console.log(ua);
+    //console.log(isDesktop.windows());
     
     //console.log(isMobile);
     //console.log(isMobile.android());
