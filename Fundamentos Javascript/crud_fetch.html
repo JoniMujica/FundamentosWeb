@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD API REST FETCH</title>
+</head>
+<body>
+    <h1>CRUD API REST FETCH</h1>
+    <section class="crud">
+        <article>
+            <h2 class="crud-title">Agregar Santo</h2>
+            <form class="crud-form">
+                <input name="nombre" type="text" placeholder="Nombre..." required>
+                <br>
+                <input name="constelacion" type="text" placeholder="Constelacion..." required>
+                <br>
+                <input type="submit" value="Enviar">
+                <input type="hidden" name="id">
+            </form>
+        </article>
+        <article>
+            <h2>Ver santos</h2>
+            <table class="crud-table">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Constelacion</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+        </article>
+    </section>
+    <template id="crud-template">
+        <tr>
+            <td class="name">Seiya</td>
+            <td class="constellation">Pegaso</td>
+            <td>
+                <button class="edit">Editar</button>
+                <button class="delete">Eliminar</button>
+            </td>
+        </tr>
+    </template>
+</body>
+<script>
+    const d = document,
+    $table = d.querySelector(".crud-table"),
+    $form = d.querySelector(".crud-form"),
+    $title = d.querySelector(".crud-title"),
+    $tempalte = d.getElementById("crud-template").content,
+    $fragment = d.createDocumentFragment();
+
+</script>
+</html>
