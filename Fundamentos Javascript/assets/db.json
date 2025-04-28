@@ -16,9 +16,9 @@
       "constelacion": "Cisne"
     },
     {
-      "id": "4",
       "nombre": "Shun",
-      "constelacion": "Andrómeda"
+      "constelacion": "Andrómeda",
+      "id": "4"
     },
     {
       "id": "5",
@@ -31,9 +31,9 @@
       "id": "hbS6SVU"
     },
     {
-      "nombre": "aldebaran",
-      "constelacion": "tauro",
-      "id": "NbkgXTc"
+      "nombre": "Dokko",
+      "constelacion": "Libra",
+      "id": "WkQga4S"
     }
   ],
   "dioses": [
