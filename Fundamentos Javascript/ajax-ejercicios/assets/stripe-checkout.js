@@ -13,6 +13,9 @@ fetchOptions = {
 }
 
 let products,prices;
+
+const moenyFormat = num => `$${num.slice(0,-2)}.${num.slice(-2)}` 
+
 Promise.all([
     fetch("https://api.stripe.com/v1/products",fetchOptions),
     fetch("https://api.stripe.com/v1/prices",fetchOptions)
@@ -33,7 +36,7 @@ Promise.all([
         $template.querySelector("figcaption").innerHTML = `
         ${productData[0].name}
         <br>
-        ${el.unit_amount_decimal} ${el.currency}`;
+        ${moenyFormat(el.unit_amount_decimal)} ${el.currency}`;
         let $clone = d.importNode($template,true);
         $fragment.appendChild($clone)
     })
@@ -45,4 +48,28 @@ Promise.all([
     console.log(err);
     let message = err.statusText || "Ocurrio un errror al conectarse a la API Stripe";
     $tacos.innerHTML = `<p>Error ${err.status}: ${message}</p>`
+})
+
+
+d.addEventListener("click",e=>{
+    //console.log(e.target);
+    if (e.target.matches(".taco *")) {
+        //alert("A comprar")
+        let price = e.target.parentElement.getAttribute("data-price");
+        console.log(price);
+        Stripe(STRIPE_KEYS.public)
+        .redirectToCheckout({
+            lineItems:[{price, quantity:1}],
+            mode: "subscription",
+            successUrl:"http://127.0.0.1:5500/Fundamentos%20Javascript/ajax-ejercicios/assets/stripe-success.html",
+            cancelUrl:"http://127.0.0.1:5500/Fundamentos%20Javascript/ajax-ejercicios/assets/stripe-cancel.html"
+        })
+        .then(res=>{
+            if (res.error) {
+                console.log(res);
+                
+                $tacos.insertAdjacentHTML("afterend",res.error.message)
+            }
+        })
+    }
 })
