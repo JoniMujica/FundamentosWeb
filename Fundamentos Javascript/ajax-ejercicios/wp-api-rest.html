@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordPress REST API</title>
+</head>
+<body>
+    <h1>WordPress REST API</h1>
+    <article id="site" class="site"></article>
+    <section id="posts" class="posts"></section>
+    <img class="loader" src="./assets/loader.svg" alt="loader">
+    <template id="posts-template">
+        <article class="post">
+            <img class="post-image">
+            <aside>
+                <h2 class="post-title"></h2>
+                <figure class="post-author"></figure>
+                <small class="post-date"></small>
+                <a class="post-link" target="_blank">Ver publicacion original</a>
+                <p class="post-excerpt"></p>
+                <div class="post-categories"></div>
+                <div class="post-tags"></div>
+                <details class="post-content">
+                    <summary>Ver contenido de la publicacion</summary>
+                    <article></article>
+                </details>
+            </aside>
+        </article>
+        <hr>
+    </template>
+    <script>
+
+        const d= document,
+        $site = d.getElementById("site"),
+        $posts = d.getElementById("posts"),
+        $loader = d.querySelector(".loader"),
+        $template = d.getElementById("posts-template").content,
+        $fragment = d.createDocumentFragment(),
+        DOMAIN = "https://malvestida.com",
+        SITE = `${DOMAIN}/wp-json`,
+        API_WP = `${SITE}/wp/v2`,
+        POSTS = `${API_WP}/posts`
+        PAGES = `${API_WP}/pages`
+        CATEGORIES = `${API_WP}/categories`
+
+
+        function getSiteData(){
+            fetch(SITE)
+            .then(res=> res.ok? res.json() : Promise.reject(res))
+            .then(json => { 
+                console.log(json)
+                $site.innerHTML = `
+                    <h3>Sitio web</h3>
+                    <h2>
+                        <a href="${json.url}" target="_blank">${json.name}</a>
+                    </h2>
+                    <p>${json.description}</p>
+                    <p>${json.timezone_string}</p>
+                `;
+            })
+            .catch(err => {
+                let message = err.statusText || "Ocurrio un error";
+                $site.innerHTML `<p>Error ${err.status}: ${message}</p>`;
+            })
+        }
+        function getPosts(){
+            fetch(POSTS)
+            .then(res=> res.ok? res.json() : Promise.reject(res))
+            .then(json => console.log(json))
+            .catch(err => {
+                let message = err.statusText || "Ocurrio un error";
+                $posts.innerHTML `<p>Error ${err.status}: ${message}</p>`;
+                $loader.style.display = "none";
+            })
+        }
+
+        d.addEventListener("DOMContentLoaded",e=>{
+            getSiteData();
+            getPosts();
+        })
+    </script>
+</body>
+</html>
