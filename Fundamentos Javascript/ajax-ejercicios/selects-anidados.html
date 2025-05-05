@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selects Anidados</title>
+</head>
+<body>
+    <h1>Selects Anidados</h1>
+    <h2>Mexico</h2>
+    <label for="select-primary">Estados</label>
+    <select name="primary" id="select-primary">
+        <option value="">Elige un estado</option>
+    </select>
+    <p></p>
+    <label for="select-secondary">Estados</label>
+    <select name="secondary" id="select-secondary">
+        <option value="">Elige un municipio</option>
+    </select>
+    <p></p>
+
+
+    <script>
+        const d = document,
+        $selectPrimary = d.getElementById("select-primary"),
+        $selectSecondary = d.getElementById("select-secondary");
+
+        //const TOKEN = "3bb1cd1f-a45a-4fb3-a2db-97b0517142eb";
+        //https://api.copomex.com/query/get_estados?token=3bb1cd1f-a45a-4fb3-a2db-97b0517142eb
+        function loadStates(){
+            fetch("https://apis.datos.gob.ar/georef/api/provincias")
+            .then(res => res.ok? res.json() : Promise.reject(res))
+            .then(json => {
+                console.log(json.provincias);
+
+
+                let $options = `
+                    <option value="">Elige un estado</option>
+                `;
+
+                json.provincias.forEach(prov => $options += `<option value="${prov.id}">${prov.nombre}</option>`);
+
+                $selectPrimary.innerHTML = $options
+                
+            })
+            .catch(err =>{
+                console.log(err);
+                let message = err.statusText || "Ocurrio un error";
+                $selectPrimary.nextElementSibling.innerHTML = `Error ${err.status}: ${message}`;
+            })
+        }
+
+        function loadTowns(stateID){
+            fetch(`https://apis.datos.gob.ar/georef/api/municipios?provincia=${stateID}&max=500`)
+            .then(res => res.ok? res.json() : Promise.reject(res))
+            .catch(err =>{
+                console.log(err);
+                let message = err.statusText || "Ocurrio un error";
+                $selectSecondary.nextElementSibling.innerHTML = `Error ${err.status}: ${message}`;
+            })
+            .then(json => {
+                console.log(json);
+
+
+                let $options = `
+                    <option value="">Elige un estado</option>
+                `;
+                json.municipios.forEach(muni => $options += `<option value="${muni.nombre.id}">${muni.nombre}</option>`);
+                $selectSecondary.innerHTML = $options
+                
+            })
+        }
+
+        d.addEventListener("DOMContentLoaded",loadStates);
+
+        $selectPrimary.addEventListener("change",e=> loadTowns(e.target.value))
+    </script>
+</body>
+</html>
