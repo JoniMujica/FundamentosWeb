@@ -1,14 +1,12 @@
 import api from "./helpers/wp_api.js";
 import { ajax } from "./helpers/ajax.js";
+import { Title } from "./components/Title.js";
+import { Loader } from "./components/Loader.js";
 
 export function App(){
-    ajax({
-        url: api.POSTS,
-        cbSuccess: (posts)=>{
-            console.log(posts);
-        }
-    })
+    const d = document,
+    $root = d.getElementById("root");
 
-    document.getElementById("root").innerHTML  = `<h1>Bienvenidos a mi primer SPA con vanilla SJ</h1>`
-    console.log(api);
+    $root.appendChild(Title());
+    $root.appendChild(Loader())
 }
