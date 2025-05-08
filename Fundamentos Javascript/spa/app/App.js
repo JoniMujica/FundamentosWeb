@@ -5,7 +5,6 @@ import { Router } from "./components/Router.js";
 
 export function App(){
     const $root = document.getElementById("root");
-    debugger
     $root.innerHTML = null;
     $root.appendChild(Header())
     $root.appendChild(Main())

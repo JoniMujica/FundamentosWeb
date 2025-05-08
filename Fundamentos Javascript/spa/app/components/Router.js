@@ -1,12 +1,12 @@
 import { ajax } from "../helpers/ajax.js"
 import api from "../helpers/wp_api.js"
+import { Post } from "./Post.js";
 import { PostCard } from "./PostCard.js";
 
 
 //Al ser asincrono, ya puedo utilizar await, y asi puedo esperar primero que espere a la peticion de Ajax, para despues, pintar lo que esta por defecto (loader = none)
 export async function Router(){
 
-    debugger
     const d = document,
     w = window,
     $main = d.getElementById("main");
@@ -22,7 +22,7 @@ export async function Router(){
         await ajax({
             url:api.POSTS,
             cbSuccess: (posts)=>{
-                console.log(posts);
+                //console.log(posts);
                 let html = "";
                 posts.forEach(post=> html += PostCard(post));
                 //d.querySelector(".loader").style.display = "none";
@@ -35,7 +35,21 @@ export async function Router(){
     }else if (hash === "#/contacto") {
         $main.innerHTML = "<h2>Seccion del contacto</h2>";
     }else{
-        $main.innerHTML = "<h2>Aqui cargara el contenido  del post previamente seleccionado</h2>";
+        //console.log(api.POST);
+        //console.log(`${api.POST}/${localStorage.getItem("wpPostId")}`);
+        
+        await ajax({
+            url:`${api.POST}/${localStorage.getItem("wpPostId")}`,
+            cbSuccess: (post)=>{
+                console.log(post);
+                $main.innerHTML = Post(post);
+                //let html = "";
+                //posts.forEach(post=> html += PostCard(post));
+                //d.querySelector(".loader").style.display = "none";
+                //$main.innerHTML = html;
+            }
+        })
+        //$main.innerHTML = "<h2>Aqui cargara el contenido  del post previamente seleccionado</h2>";
     }
     d.querySelector(".loader").style.display = "none";
     
