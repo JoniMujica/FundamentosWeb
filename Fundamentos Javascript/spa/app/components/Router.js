@@ -31,7 +31,17 @@ export async function Router(){
         })
         //$main.innerHTML = "<h2>Seccion del home</h2>";
     }else if(hash.includes("#/search")){
-        $main.innerHTML = "<h2>Seccion del buscador</h2>";
+        let query = localStorage.getItem("wpSearch");
+        if (!query) return;
+
+
+        await ajax({
+            url:`${api.SEARCH}${query}`,
+            cbSuccess: (search)=>{
+                console.log(search);
+            }
+        })
+
     }else if (hash === "#/contacto") {
         $main.innerHTML = "<h2>Seccion del contacto</h2>";
     }else{
