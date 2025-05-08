@@ -14,6 +14,16 @@ export function Router(){
     $posts.innerHTML = null;
 
     if (!hash || hash === "#/") {
+        ajax({
+            url:api.POSTS,
+            cbSuccess: (posts)=>{
+                console.log(posts);
+                let html = "";
+                posts.forEach(post=> html += PostCard(post));
+                d.querySelector(".loader").style.display = "none";
+                $posts.innerHTML = html;
+            }
+        })
         $posts.innerHTML = "<h2>Seccion del home</h2>";
     }else if(hash.includes("#/search")){
         $posts.innerHTML = "<h2>Seccion del buscador</h2>";
@@ -23,14 +33,5 @@ export function Router(){
         $posts.innerHTML = "<h2>Aqui cargara el contenido  del post previamente seleccionado</h2>";
     }
     
-    //ajax({
-    //    url:api.POSTS,
-    //    cbSuccess: (posts)=>{
-    //        console.log(posts);
-    //        let html = "";
-    //        posts.forEach(post=> html += PostCard(post));
-    //        d.querySelector(".loader").style.display = "none";
-    //        d.getElementById("posts").innerHTML = html;
-    //    }
-    //})
+    
 }
