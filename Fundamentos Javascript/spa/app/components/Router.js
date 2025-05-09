@@ -2,11 +2,12 @@ import { ajax } from "../helpers/ajax.js"
 import api from "../helpers/wp_api.js"
 import { Post } from "./Post.js";
 import { PostCard } from "./PostCard.js";
+import { SerchCard } from "./SearchCard.js";
 
 
 //Al ser asincrono, ya puedo utilizar await, y asi puedo esperar primero que espere a la peticion de Ajax, para despues, pintar lo que esta por defecto (loader = none)
 export async function Router(){
-
+    debugger
     const d = document,
     w = window,
     $main = d.getElementById("main");
@@ -22,7 +23,7 @@ export async function Router(){
         await ajax({
             url:api.POSTS,
             cbSuccess: (posts)=>{
-                //console.log(posts);
+                console.log(posts);
                 let html = "";
                 posts.forEach(post=> html += PostCard(post));
                 //d.querySelector(".loader").style.display = "none";
@@ -32,13 +33,27 @@ export async function Router(){
         //$main.innerHTML = "<h2>Seccion del home</h2>";
     }else if(hash.includes("#/search")){
         let query = localStorage.getItem("wpSearch");
-        if (!query) return;
+        if (!query) {
+            d.querySelector(".loader").style.display = "none";
+            return;
+        }
 
 
         await ajax({
             url:`${api.SEARCH}${query}`,
             cbSuccess: (search)=>{
                 console.log(search);
+                let html = "";
+                if (search.length===0) {
+                    html = `
+                        <p class="error">
+                            No existen resultados de busqueda para el termino <mark>${query}</mark>
+                        </p>
+                    `;
+                }else{
+                    search.forEach(post=>html += SerchCard(post));
+                }
+                $main.innerHTML = html;
             }
         })
 

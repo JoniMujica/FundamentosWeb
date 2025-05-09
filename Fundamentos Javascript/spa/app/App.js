@@ -9,6 +9,6 @@ export function App(){
     $root.appendChild(Header())
     $root.appendChild(Main())
     $root.appendChild(Loader())
-
+    debugger
     Router();
 }
