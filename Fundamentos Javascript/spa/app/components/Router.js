@@ -7,7 +7,6 @@ import { SerchCard } from "./SearchCard.js";
 
 //Al ser asincrono, ya puedo utilizar await, y asi puedo esperar primero que espere a la peticion de Ajax, para despues, pintar lo que esta por defecto (loader = none)
 export async function Router(){
-    debugger
     const d = document,
     w = window,
     $main = d.getElementById("main");
