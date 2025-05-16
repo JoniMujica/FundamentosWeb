@@ -1,6 +1,7 @@
 import Componente from "./components/Componente.jsx";
 import Propiedades from "./components/Propiedades.jsx";
 import './App.css'
+import Estado from "./components/Estado.jsx";
 
 function App() {
   let nombre = "Jon";
@@ -39,6 +40,8 @@ function App() {
             funcion={num => num * num}
             componenteReact={<Componente msg="Soy un componente pasado como Prop" />}
           />
+          <hr />
+          <Estado />
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </section>
       </div>
