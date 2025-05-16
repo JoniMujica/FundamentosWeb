@@ -1,3 +1,4 @@
+import Componente from "./components/Componente.jsx";
 import './App.css'
 
 function App() {
@@ -21,6 +22,13 @@ function App() {
         <ul>
           {estaciones.map((el,index)=> (<li key={index}>{el}</li>))}
         </ul>
+
+        <section>
+          {/*<Componente msg="Hola soy un componente, desde una prop" />*/}
+          {/*<Componente msg="Hola soy un componente Funcional, desde una prop" />*/}
+          <Componente msg="Hola soy un componente Funcional Expresado, desde una prop" />
+          <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </section>
       </div>
     </>
   )
