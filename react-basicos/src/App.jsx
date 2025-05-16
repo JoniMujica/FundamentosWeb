@@ -1,4 +1,5 @@
 import Componente from "./components/Componente.jsx";
+import Propiedades from "./components/Propiedades.jsx";
 import './App.css'
 
 function App() {
@@ -27,6 +28,17 @@ function App() {
           {/*<Componente msg="Hola soy un componente, desde una prop" />*/}
           {/*<Componente msg="Hola soy un componente Funcional, desde una prop" />*/}
           <Componente msg="Hola soy un componente Funcional Expresado, desde una prop" />
+          <hr />
+          <Propiedades
+            cadena="Esto es una cadena de texto" 
+            numero={19} 
+            booleano={false} 
+            arreglo={[1,2,3]} 
+            objeto={{nombre:"jon",correo:"Jonmircha@gmailñ.com"}}
+            elementoReact={<i>Esto es un elemento React</i>}
+            funcion={num => num * num}
+            componenteReact={<Componente msg="Soy un componente pasado como Prop" />}
+          />
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </section>
       </div>
