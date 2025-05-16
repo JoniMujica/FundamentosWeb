@@ -3,6 +3,7 @@ import Propiedades from "./components/Propiedades.jsx";
 import './App.css'
 import Estado from "./components/Estado.jsx";
 import RenderizadoCondicional from "./components/RenderizadoCondicional.jsx";
+import RenderizadoElementos from "./components/RenderizadoElementos.jsx";
 
 function App() {
   let nombre = "Jon";
@@ -45,6 +46,8 @@ function App() {
           <Estado />
           <hr />
           <RenderizadoCondicional />
+          <hr />
+          <RenderizadoElementos />
           <hr />
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </section>
