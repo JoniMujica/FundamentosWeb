@@ -4,7 +4,7 @@ import './App.css'
 import Estado from "./components/Estado.jsx";
 import RenderizadoCondicional from "./components/RenderizadoCondicional.jsx";
 import RenderizadoElementos from "./components/RenderizadoElementos.jsx";
-import {EventosES6,EventosES7} from "./components/Eventos.jsx";
+import {EventosES6,EventosES7, MasSobreEventos} from "./components/Eventos.jsx";
 
 function App() {
   let nombre = "Jon";
@@ -53,6 +53,8 @@ function App() {
           <EventosES6 />
           <hr />
           <EventosES7 />
+          <hr />
+          <MasSobreEventos />
           <hr />
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </section>
