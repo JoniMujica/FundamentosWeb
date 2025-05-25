@@ -5,6 +5,7 @@ import Estado from "./components/Estado.jsx";
 import RenderizadoCondicional from "./components/RenderizadoCondicional.jsx";
 import RenderizadoElementos from "./components/RenderizadoElementos.jsx";
 import {EventosES6,EventosES7, MasSobreEventos} from "./components/Eventos.jsx";
+import Padre from "./components/ComunicacionComponentes.jsx";
 
 function App() {
   let nombre = "Jon";
@@ -55,6 +56,8 @@ function App() {
           <EventosES7 />
           <hr />
           <MasSobreEventos />
+          <hr />
+          <Padre />
           <hr />
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </section>
