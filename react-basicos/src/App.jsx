@@ -6,6 +6,7 @@ import RenderizadoCondicional from "./components/RenderizadoCondicional.jsx";
 import RenderizadoElementos from "./components/RenderizadoElementos.jsx";
 import {EventosES6,EventosES7, MasSobreEventos} from "./components/Eventos.jsx";
 import Padre from "./components/ComunicacionComponentes.jsx";
+import CicloVida from "./components/CicloVida.jsx";
 
 function App() {
   let nombre = "Jon";
@@ -58,6 +59,8 @@ function App() {
           <MasSobreEventos />
           <hr />
           <Padre />
+          <hr />
+          <CicloVida />
           <hr />
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </section>
