@@ -8,6 +8,7 @@ import {EventosES6,EventosES7, MasSobreEventos} from "./components/Eventos.jsx";
 import Padre from "./components/ComunicacionComponentes.jsx";
 import CicloVida from "./components/CicloVida.jsx";
 import AjaxApi from "./components/AjaxAPI.jsx";
+import ContadorHooks from "./components/ContadorHooks.jsx";
 
 function App() {
   let nombre = "Jon";
@@ -64,6 +65,8 @@ function App() {
           <CicloVida />
           <hr />
           <AjaxApi />
+          <hr />
+          <ContadorHooks titulo="Seguidores" />
           <hr />
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </section>
