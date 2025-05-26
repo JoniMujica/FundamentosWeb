@@ -12,7 +12,7 @@ export default function ScrollHooks(){
 
         window.addEventListener("scroll", detectarScroll)
 
-        return()=> window.removeEventListener("scroll", detectarScroll);
+        return()=> {window.removeEventListener("scroll", detectarScroll)};
     },[scrollY]) //Esto se va a ejecutar solo cuando scrollY sufra cambios (recomendable)
 
     useEffect(()=>{
