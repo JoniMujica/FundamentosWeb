@@ -9,6 +9,7 @@ import Padre from "./components/ComunicacionComponentes.jsx";
 import CicloVida from "./components/CicloVida.jsx";
 import AjaxApi from "./components/AjaxAPI.jsx";
 import ContadorHooks from "./components/ContadorHooks.jsx";
+import ScrollHooks from "./components/ScrollHooks.jsx";
 
 function App() {
   let nombre = "Jon";
@@ -67,6 +68,8 @@ function App() {
           <AjaxApi />
           <hr />
           <ContadorHooks titulo="Seguidores" />
+          <hr />
+          <ScrollHooks />
           <hr />
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </section>
