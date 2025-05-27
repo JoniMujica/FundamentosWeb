@@ -12,6 +12,7 @@ import ContadorHooks from "./components/ContadorHooks.jsx";
 import ScrollHooks from "./components/ScrollHooks.jsx";
 import RelojHooks from "./components/RelojHooks.jsx";
 import AjaxHooks from "./components/AjaxHooks.jsx";
+import HooksPersonalizados from "./components/HooksPersonalizados.jsx";
 
 function App() {
   let nombre = "Jon";
@@ -76,6 +77,8 @@ function App() {
           <RelojHooks />
           <hr />
           <AjaxHooks />
+          <hr />
+          <HooksPersonalizados /> 
           <hr />
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </section>
