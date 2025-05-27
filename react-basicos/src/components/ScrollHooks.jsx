@@ -26,7 +26,7 @@ export default function ScrollHooks(){
         return () => { //al agregar el return con una funcion, estariamos indicando que el componente esta en fase de desmontaje, se comportaria como componentWillUnmount()
           console.log("Fase de desmontaje");
       }
-    }, [third])
+    })
     
     return(
         <>
