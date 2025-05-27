@@ -15,6 +15,7 @@ import AjaxHooks from "./components/AjaxHooks.jsx";
 import HooksPersonalizados from "./components/HooksPersonalizados.jsx";
 import Referencias from "./components/Referencias.jsx";
 import Formularios from "./components/Formularios.jsx";
+import Estilos from "./components/Estilos.jsx";
 
 function App() {
   let nombre = "Jon";
@@ -85,6 +86,8 @@ function App() {
           <Referencias />
           <hr />
           <Formularios /> 
+          <hr />
+          <Estilos />
           <hr />
           <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
         </section>
