@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import CrudForm from './CrudForm'
 import CrudTable from './CrudTable'
-import { helperHtpp } from '../helpers/helpHttp';
+import { helperHttp } from '../helpers/helpHttp';
 import Loader from './Loader';
 import Message from './Message';
 
@@ -10,7 +10,7 @@ const CrudApi = () => {
     const [dataToEdit, setDataToEdit] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(false);
-    let api = helperHtpp(),
+    let api = helperHttp(),
     url="http://localhost:5000/santos";
 
     useEffect(() => {

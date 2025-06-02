@@ -1,4 +1,4 @@
-export const helperHtpp = ()=>{
+export const helperHttp = ()=>{
     
     const customFetch = (endpoint,options)=> {
         const defaultHeader = {
