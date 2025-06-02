@@ -96,7 +96,7 @@ const CrudApi = () => {
           <CrudForm createData={createData} updateData={updateData} dataToEdit={dataToEdit} setDataToEdit={setDataToEdit}/>
           {loading && <Loader />}
           {error && <Message msg={`Error ${error.status}: ${error.statusText}`} bgColor="#dc3545"/>}
-          {db && <CrudTable data={db} deleteData={deleteData} setDataToEdit={setDataToEdit}/>}
+          {db && (<CrudTable data={db} deleteData={deleteData} setDataToEdit={setDataToEdit}/>)}
         </article>
     </div>
   )
