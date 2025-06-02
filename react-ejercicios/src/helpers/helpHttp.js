@@ -1,29 +1,39 @@
 export const helperHttp = ()=>{
     
     const customFetch = (endpoint,options)=> {
-        const defaultHeader = {
-            accept:"application/json"
-        };
+      const defaultHeader = {
+        accept: "application/json",
+      };
 
-        const controller = new AbortController();
-        options.signal = controller.signal;
+      const controller = new AbortController();
+      options.signal = controller.signal;
 
-        options.method = options.method || "GET";
-        options.headers = options.headers? {...defaultHeader, ...options.headers}: defaultHeader;
-        
-        options.body = JSON.stringify(options.body) || false;
-        if (!options.body) delete options.body;
+      options.method = options.method || "GET";
+      options.headers = options.headers
+        ? { ...defaultHeader, ...options.headers }
+        : defaultHeader;
 
-        console.log(options);
-        
-        setTimeout(() => controller.abort(), 9000);
+      options.body = JSON.stringify(options.body) || false;
+      if (!options.body) delete options.body;
 
-        return fetch(endpoint,options).then(res=>res.ok? res.json():Promise.reject(
-            {
+      //console.log(options);
+      //controller.abort();
+      setTimeout(() => controller.abort(), 9000);
+
+      return fetch(endpoint, options)
+        .then((res) => {
+          return res.ok
+            ? res.json()
+            : Promise.reject({
                 err: true,
                 status: res.status || "00",
-                statusText: res.statusText || "Ocurrio un error"
-            })).catch(err=>err)
+                statusText: res.statusText || "Ocurrio un error",
+              });
+        })
+        .catch((err) => {
+          //console.log(err);
+          return err;
+        });
     }
 
     const get = (url,options={}) => customFetch(url,options);

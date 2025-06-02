@@ -20,6 +20,10 @@ const CrudApi = () => {
         if (!res.err) {
           setDb(res);
           setError(null);
+          //console.log(res.name);
+          //console.log(res.code);
+          //console.log(res.stack);
+          //console.log(res);
         }else{
           setDb(null)
           setError(res)
