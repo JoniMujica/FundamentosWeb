@@ -11,3 +11,9 @@ html{
 hr{
   margin: 2rem auto;
 }
+
+.active{
+  font-weight: bold;
+  color: #61dafb;
+  text-decoration: none;
+}

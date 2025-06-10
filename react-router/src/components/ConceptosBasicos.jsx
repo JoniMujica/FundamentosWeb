@@ -4,16 +4,18 @@ import Acerca from "../pages/Acerca";
 import Contacto from "../pages/Contacto";
 import Home from '../pages/Home';
 import Error404 from '../pages/Error404';
+import MenuConceptos from "./MenuConceptos";
 const ConceptosBasicos = () => {
   return (
     <div>
       <h2>ConceptosBasicos</h2>
       <Router>
+        <MenuConceptos />
         <Routes>
-            <Route path='/' element={<Home />}/>
-            <Route path='/acerca' element={<Acerca />}/>
-            <Route path='/contacto' element={<Contacto />}/>
-            <Route path='*' element={<Error404 />}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/acerca" element={<Acerca />} />
+          <Route path="/contacto" element={<Contacto />} />
+          <Route path="*" element={<Error404 />} />
         </Routes>
       </Router>
     </div>
