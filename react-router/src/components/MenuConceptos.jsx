@@ -41,6 +41,10 @@ const MenuConceptos = () => {
           <Link to="/usuario/JoniMujica">JoniMujica</Link>
           <Link to="/usuario/Vero">Vero</Link>
         </li>
+        <li>
+          <span>Parametros de consulta</span>
+          <Link to="/productos">Productos</Link>
+        </li>
       </ol>
     </nav>
   );

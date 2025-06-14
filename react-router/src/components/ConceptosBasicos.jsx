@@ -6,6 +6,7 @@ import Home from '../pages/Home';
 import Error404 from '../pages/Error404';
 import MenuConceptos from "./MenuConceptos";
 import Usuario from "../pages/Usuario";
+import Productos from "../pages/Productos";
 const ConceptosBasicos = () => {
   return (
     <div>
@@ -18,6 +19,7 @@ const ConceptosBasicos = () => {
           <Route path="/contacto" element={<Contacto />} />
           <Route path="*" element={<Error404 />} />
           <Route path="/usuario/:username" element={<Usuario />} />
+          <Route path="/productos" element={<Productos />} />
         </Routes>
       </Router>
     </div>
