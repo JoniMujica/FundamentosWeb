@@ -1,6 +1,7 @@
 import React from 'react'
 import {
   Navigate,
+  Outlet,
   Route,
   BrowserRouter as Router,
   Routes,
@@ -12,6 +13,7 @@ import Error404 from "../pages/Error404";
 import MenuConceptos from "./MenuConceptos";
 import Usuario from "../pages/Usuario";
 import Productos from "../pages/Productos";
+import { Topic, ReactTopics } from "../pages/ReactTopics";
 const ConceptosBasicos = () => {
   return (
     <div>
@@ -27,6 +29,19 @@ const ConceptosBasicos = () => {
           <Route path="/productos" element={<Productos />} />
           <Route path="/about" element={<Navigate to="/acerca" />} />
           <Route path="/contact" element={<Navigate to="/contacto" />} />
+          {/* Re-modificacion del la v5 a la v6-7*/}
+          {/*En este caso no es necesario agregar "/react/*" ya que estamos pasando parametros, si asi lo hiciera, concatenaria los parametros */}
+          <Route
+            path="/react"
+            element={
+              <>
+                <h4>Elije un tema de react</h4>
+                <ReactTopics />
+              </>
+            }>
+            {/* Aca mencionamos todas las subrutas que va a tener ReactTopics, pero para poder renderizarlo, necesitamos del componente <Outlet /> , dependiendo donde se inserte, se imprimira los datos del los elementos hijos declarados (en este caso el componente <Topic /> pasando parametros) */}
+            <Route path=":topic" element={<Topic />} />
+          </Route>
         </Routes>
       </Router>
     </div>
