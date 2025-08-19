@@ -89,7 +89,15 @@ th,td{
     padding: 0.5rem;
     border-bottom: thin solid #dedede;
 }
+hr{
+  margin: 2rem auto;
+}
 
+.active{
+  font-weight: bold;
+  color: #61dafb;
+  text-decoration: none;
+}
 @media screen and (min-width:1024px) {
     .grid-1-2{
         display: grid;

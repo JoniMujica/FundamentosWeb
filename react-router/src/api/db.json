@@ -16,8 +16,8 @@
       "constelacion": "Cisne"
     },
     {
-      "nombre": "Shun",
-      "constelacion": "Andrómeda",
+      "nombre": "Afrondita",
+      "constelacion": "Picis",
       "id": "4"
     },
     {
@@ -29,6 +29,16 @@
       "id": "1748653457971",
       "nombre": "sdad",
       "constelacion": "asdsa"
+    },
+    {
+      "id": "1755614833093",
+      "nombre": "Camus",
+      "constelacion": "Acuario2"
+    },
+    {
+      "id": "1755616761148",
+      "nombre": "sdasfds",
+      "constelacion": "sdfsd"
     }
   ],
   "dioses": [
