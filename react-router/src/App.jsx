@@ -12,9 +12,9 @@ function App() {
         Documentacion
       </a>
       <hr />
-      <CrudApi />
+      {/*<CrudApi />*/}
       <hr />
-      {/*<SongSearch />*/}
+      <SongSearch />
       <hr />
       {/*<ConceptosBasicos />*/}
     </div>
