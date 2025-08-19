@@ -5,12 +5,16 @@ import Loader from "./Loader";
 import { helperHttp } from "../helpers/helpHttp";
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Error404 from "../pages/Error404";
+import SongTable from "./SongTable";
+
+let mySongInit = JSON.parse(localStorage.getItem("mySongs")) || [];
 
 const SongSearch = () => {
   const [search, setSearch] = useState(null);
   const [lyric, setLyric] = useState(null);
   const [bio, setBio] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [mySongs, setMySongs] = useState(mySongInit);
 
   useEffect(() => {
     if (search === null) return;
@@ -18,7 +22,7 @@ const SongSearch = () => {
     const fetchData = async () => {
       const { artist, song } = search;
       let artistUrl = `https://www.theaudiodb.com/api/v1/json/2/search.php?s=${artist}`,
-        songUrl = `https://api.lyrics.ovh/v1/${artist}/${song}`;
+        songUrl = `https://private-anon-4eb9b6bd0a-lyricsovh.apiary-mock.com/v1/${artist}/${song}`;
 
       console.log(artistUrl, songUrl);
       setLoading(true);
@@ -33,11 +37,20 @@ const SongSearch = () => {
       setLoading(false);
     };
     fetchData();
-  }, [search]);
+
+    localStorage.setItem("mySongs", JSON.stringify(mySongs));
+  }, [search, mySongs]);
 
   const handleSearch = (data) => {
     console.log(data);
     setSearch(data);
+  };
+
+  const handleSaveSong = () => {
+    alert("Salvando cancion en favoritos");
+  };
+  const handleDeleteSong = (id) => {
+    alert(`Eliminando cancion con el id: ${id}`);
   };
 
   return (
@@ -48,13 +61,20 @@ const SongSearch = () => {
           <Link to="/">Home</Link>
         </header>
         {loading && <Loader />}
-        <article className="grid-1-3">
+        <article className="grid-1-2">
           <Routes>
             <Route
               path="/"
               element={
                 <>
-                  <SongForm handleSearch={handleSearch} />
+                  <SongForm
+                    handleSearch={handleSearch}
+                    handleSaveSong={handleSaveSong}
+                  />
+                  <SongTable
+                    mySongs={mySongs}
+                    handleDeleteSong={handleDeleteSong}
+                  />
                   <h2>Tabla de canciones</h2>
                   {search && !loading && (
                     <SongDetails search={search} lyric={lyric} bio={bio} />

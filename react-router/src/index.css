@@ -21,12 +21,19 @@ input[type="text"],input[type="email"],textarea{
     background-color: transparent;
 }
 
+input[type="button"]:disabled{
+    border-color: rgba(118, 118, 118, .3);
+    color: rgba(16, 16, 16, .3);
+    background-color: rgba(239, 239, 239, .3);
+    cursor: default;
+}
+
 textarea{
     font-family: inherit;
     resize: none;
 }
 
-button,input[type="submit"],input[type="reset"]{
+button,input[type="submit"],input[type="reset"],input[type="button"]{
     border: thin solid #444;
     border-radius: 0.25rem;
     padding: 0.5rem 1rem;
