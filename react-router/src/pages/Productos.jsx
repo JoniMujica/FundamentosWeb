@@ -5,6 +5,8 @@ const Productos = () => {
     //let location = useLocation();
     //console.log(location);
     let {search} = useLocation();
+    console.log(search);
+    
     let query = new URLSearchParams(search);
     console.log(query);
 

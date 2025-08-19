@@ -1,7 +1,8 @@
 import React from 'react'
 import {
+  HashRouter,
   Navigate,
-  Outlet,
+  Link,
   Route,
   BrowserRouter as Router,
   Routes,
@@ -14,9 +15,20 @@ import MenuConceptos from "./MenuConceptos";
 import Usuario from "../pages/Usuario";
 import Productos from "../pages/Productos";
 import { Topic, ReactTopics } from "../pages/ReactTopics";
+import Login from "../pages/Login";
+import Dashboard from "../pages/Dashboard";
+import PrivateRoute from "./PrivateRoute";
 const ConceptosBasicos = () => {
   return (
     <div>
+      <h2>Hash Router</h2>
+      <HashRouter>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/acerca">Acerca</Link>
+          <Link to="/contacto">Contacto</Link>
+        </nav>
+      </HashRouter>
       <h2>ConceptosBasicos</h2>
       <Router>
         <MenuConceptos />
@@ -42,6 +54,18 @@ const ConceptosBasicos = () => {
             {/* Aca mencionamos todas las subrutas que va a tener ReactTopics, pero para poder renderizarlo, necesitamos del componente <Outlet /> , dependiendo donde se inserte, se imprimira los datos del los elementos hijos declarados (en este caso el componente <Topic /> pasando parametros) */}
             <Route path=":topic" element={<Topic />} />
           </Route>
+
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/dashboard"
+            element={
+              <>
+                <PrivateRoute redirectTo="/login">
+                  <Dashboard />
+                </PrivateRoute>
+              </>
+            }
+          />
         </Routes>
       </Router>
     </div>
