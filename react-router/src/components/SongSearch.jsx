@@ -6,6 +6,7 @@ import { helperHttp } from "../helpers/helpHttp";
 import { Link, Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Error404 from "../pages/Error404";
 import SongTable from "./SongTable";
+import SongPage from "../pages/SongPage";
 
 let mySongInit = JSON.parse(localStorage.getItem("mySongs")) || [];
 
@@ -48,9 +49,26 @@ const SongSearch = () => {
 
   const handleSaveSong = () => {
     alert("Salvando cancion en favoritos");
+    let currentSong = {
+      search,
+      lyric,
+      bio,
+    };
+
+    setMySongs((mySongs) => [...mySongs, currentSong]);
+    setSearch(null);
   };
   const handleDeleteSong = (id) => {
-    alert(`Eliminando cancion con el id: ${id}`);
+    //alert(`Eliminando cancion con el id: ${id}`);
+
+    let isDelete = window.confirm(
+      `Estas seguro de eliminar la cancion con el id "${id}"?`
+    );
+    if (isDelete) {
+      let songs = mySongs.filter((el, index) => index != id);
+      setMySongs(songs);
+      localStorage.setItem("mySongs", JSON.stringify(songs));
+    }
   };
 
   return (
@@ -87,6 +105,7 @@ const SongSearch = () => {
               element={
                 <>
                   <h2>Pagina de cancion</h2>
+                  <SongPage mySongs={mySongs} />
                 </>
               }
             />
